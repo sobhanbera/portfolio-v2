@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+    transition: 0.3s all;
+    padding: 0;
+    margin: 0;
+
+    outline: none;
+    list-style: none;
+    list-style-type: none;
+    text-decoration: none;
+
+    // background: transparent;
+    font-family: Karla, Roboto, Ubuntu, sans-serif;
+
+    user-select: none; // optional
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #0a192f;
+}
+
+body {
+    font: 700 1.5rem 'Helvetica Neue', 'Helvetica', sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}

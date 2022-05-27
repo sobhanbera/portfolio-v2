@@ -1,33 +1,21 @@
-import type {NextPage} from 'next'
-import {useEffect, useState} from 'react'
+import {useEffect, useRef} from 'react'
+
+import gsap from 'gsap'
 import {motion} from 'framer-motion'
 
-import styles from '../styles/Home.module.css'
+import styles from '../styles/pages/landing.module.scss'
+import {Footer, Header, InfiniteLoopingScrollView} from '../components'
 
-const Home: NextPage = () => {
-    const [color, setColor] = useState('black')
-
-    const listenScrollEvent = e => {
-        if (window.scrollY > 400) {
-            setColor('black')
-        } else {
-            setColor('white')
-        }
-    }
-
-    useEffect(() => {
-        window.addEventListener('scroll', listenScrollEvent)
-    }, [])
-
+export default function Home() {
     return (
-        <motion.div
-            animate={{
-                background: color,
-            }}
-            className={styles.container}>
-            asdf
-        </motion.div>
+        <InfiniteLoopingScrollView verticalBackups={4}>
+            <main className={styles.root}>
+                <Header />
+
+                {/* <MainContainer /> */}
+
+                <Footer />
+            </main>
+        </InfiniteLoopingScrollView>
     )
 }
-
-export default Home
