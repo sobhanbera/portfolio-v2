@@ -1,0 +1,18 @@
+.header {
+    .mainHeader {
+        .logoWrapper {
+            a {
+                svg {
+                    height: 60px;
+
+                    &:hover {
+                        fill: #64daff1f;
+                    }
+                }
+            }
+        }
+
+        .navigations {
+        }
+    }
+}
