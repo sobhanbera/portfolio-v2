@@ -36,8 +36,8 @@ export default function Greeting() {
     // a button will be shown which will when pressed will disable the greeting
     // this var control wheather to show that buttton or not
     // actually after some time interval this button will be visible in the view...
-    const [showTapToContinueButton, setShowTapToContinueButton] =
-        useState(false)
+    // const [showTapToContinueButton, setShowTapToContinueButton] =
+    // useState(false)
 
     useEffect(() => {
         // to update the greeting text
@@ -51,13 +51,13 @@ export default function Greeting() {
         // so it am setting a time more than 5-6 seconds
         setTimeout(() => {
             setShowGreeting(false)
-            setShowTapToContinueButton(false)
-        }, 5500)
+            // setShowTapToContinueButton(false)
+        }, 3500)
 
         // 3 second is the deafult time when everything is loaded
-        setTimeout(() => {
-            setShowTapToContinueButton(true)
-        }, 3000)
+        // setTimeout(() => {
+        //     setShowTapToContinueButton(true)
+        // }, 3000)
     }, [])
 
     return (
@@ -69,7 +69,7 @@ export default function Greeting() {
                 setShowGreeting(false)
             }}>
             {/* bare component, just to maintain the space-between properties in css */}
-            <div className={styles.flexBalancer}></div>
+            {/* <div className={styles.flexBalancer}></div> */}
 
             <div className={styles.greetingContainer}>
                 {/* since the index will go to infinite, for that to control the behaviour we are using % operator */}
@@ -87,11 +87,11 @@ export default function Greeting() {
             </div>
 
             {/* continue button if the user is frustated :) hehe */}
-            <div className={styles.greetingContinue}>
+            {/* <div className={styles.greetingContinue}>
                 {showTapToContinueButton ? (
                     <span>Tap Anywhere To Continue...</span>
                 ) : null}
-            </div>
+            </div> */}
         </div>
     )
 }
