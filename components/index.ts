@@ -4,4 +4,7 @@ import Header from './Header'
 import Footer from './Footer'
 import Logo from './Logo'
 
-export {InfiniteLoopingScrollView, Header, Footer, Logo}
+import Greeting from './Greeting'
+import Name from './Name'
+
+export {InfiniteLoopingScrollView, Header, Footer, Logo, Greeting, Name}
