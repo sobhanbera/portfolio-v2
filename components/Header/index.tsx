@@ -123,7 +123,7 @@ export default function Header() {
                         viewBox="0 0 100 64"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg">
-                        <rect width="100" height="6" rx="3" fill="black" />
+                        <rect width="100" height="6" rx="3" />
                         <rect y="29" width="100" height="6" rx="3" />
                         <rect y="58" width="53" height="6" rx="3" />
                     </svg>

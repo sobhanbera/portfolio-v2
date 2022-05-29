@@ -16,8 +16,6 @@
         width: 1200px;
         min-height: 80vh;
 
-        // background-color: red;
-
         .greetingText {
             font-size: 16px;
             font-weight: 400;
@@ -98,7 +96,7 @@
             margin: 20px 0px;
 
             &:hover {
-                background-color: rgba(var(--primary-rgb), 0.055);
+                background-color: rgba(var(--primary-rgb), 0.1);
             }
         }
     }
@@ -189,6 +187,10 @@
             .workText {
                 font-size: 32px;
                 max-width: 650px;
+            }
+
+            .currentStatusText {
+                font-size: 16px;
             }
         }
     }

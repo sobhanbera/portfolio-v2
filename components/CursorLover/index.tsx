@@ -66,11 +66,17 @@ export default function CursorLover(props: Props) {
                     duration:
                         props.animationDuration || DEFAULT_ANIMATION_DURATION,
                     ease: 'power2.out',
+                    // smoothOrigin: true,
                 })
+                console.log(
+                    clientX * (props.animationFactor || ANIMATION_FACTOR),
+                    clientY * (props.animationFactor || ANIMATION_FACTOR),
+                )
             }
         },
         [x, y, width],
     )
+
     /**
      * when the cursor is not in this component just to go the initial state of position
      * and reset all the states
@@ -85,6 +91,7 @@ export default function CursorLover(props: Props) {
             ease: `elastic.out(1.2, ${
                 props.animationFactor || ANIMATION_FACTOR
             })`,
+            // smoothOrigin: true,
         })
     }
 
@@ -99,6 +106,7 @@ export default function CursorLover(props: Props) {
         attracterRef.current?.addEventListener('mousemove', e => {
             onHover(e.clientX, e.clientY)
         })
+
         attracterRef.current?.addEventListener('mouseleave', e => onLeave())
 
         // removing all the events on cleanup

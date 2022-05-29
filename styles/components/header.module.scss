@@ -14,7 +14,6 @@
         align-items: center;
 
         .logoWrapper {
-            // position: absolute;
             z-index: 1000;
 
             a {
@@ -173,7 +172,7 @@
         }
 
         .menuButton {
-            z-index: 10;
+            z-index: 1000;
 
             position: fixed;
             top: 20px;
@@ -243,6 +242,7 @@
 
         .menuContainer {
             position: fixed;
+            z-index: 999;
             top: 0;
             right: 0;
 
@@ -258,12 +258,11 @@
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: flex-start;
+                backdrop-filter: blur(10px);
 
                 .menuRightPartition {
                     flex-grow: 2;
                     height: 100%;
-
-                    transition: backdrop-filter 2s;
                 }
 
                 .menuPartition {
@@ -433,22 +432,10 @@
             &.active {
                 top: 0;
                 right: 0;
-
-                .menuBackdrop {
-                    .menuRightPartition {
-                        backdrop-filter: blur(5px);
-                    }
-                }
             }
             &.inactive {
                 top: 0;
                 right: -100%;
-
-                .menuBackdrop {
-                    .menuRightPartition {
-                        backdrop-filter: blur(5px);
-                    }
-                }
             }
         }
     }
