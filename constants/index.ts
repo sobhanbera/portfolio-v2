@@ -11,6 +11,12 @@ export const MY_EXPERIENCE_TAG = '#experience' // tag to move to different secti
 export const MY_PROJECTS_TAG = '#projects' // tag to move to different section in the page
 export const CONTACT_ME_TAG = '#contactme' // tag to move to different section in the page
 
+export const ABOUT_ME_STRING = 'aboutme' // string for the same above
+export const MY_BLOGS_STRING = 'blogs' // string for the same above
+export const MY_EXPERIENCE_STRING = 'experience' // string for the same above
+export const MY_PROJECTS_STRING = 'projects' // string for the same above
+export const CONTACT_ME_STRING = 'contactme' // string for the same above
+
 export const GITHUB_URL = 'https://github.com/sobhanbera' // link to my GitHub profile
 export const LINKEDIN_URL = 'https://www.linkedin.com/in/sobhanbera' // url of my linkedin profile
 export const INSTAGRAM_URL = 'https://www.instagram.com/sobhanbera_' // link of instagram account

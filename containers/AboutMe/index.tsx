@@ -5,6 +5,7 @@ import 'aos/dist/aos.css'
 
 import styles from '../../styles/containers/aboutme.module.scss'
 import {CursorLover} from '../../components'
+import {ABOUT_ME_STRING} from '../../constants'
 
 const ABOUT_ME_TEXT = `
 Hello Geeks, I'm Sobhan Bera! I hold a deep interest in Programming, especially in designing software. I am currently a professional full-stack web developer and full-stack android developer. At the time, I work for different clients to create and enhance their products.
@@ -18,7 +19,7 @@ const ABOUT_ME_TEXT3 = `Moreover I like to read books. I also practice to improv
 
 export default function AboutMe() {
     return (
-        <div className={styles.aboutMeContainer}>
+        <div className={styles.aboutMeContainer} id={ABOUT_ME_STRING}>
             <div className={styles.aboutMeWrapper}>
                 <div className={styles.aboutMeHeader} data-aos="fade-up">
                     <p className={styles.line}></p>
