@@ -5,6 +5,7 @@ import {
     ABOUT_ME_TAG,
     CONTACT_ME_TAG,
     GITHUB_URL,
+    HOME_URL_OR_STRING,
     HOME_URL_OR_TAG,
     INSTAGRAM_URL,
     LINKEDIN_URL,
@@ -33,8 +34,11 @@ export default function Header() {
         })
     }, [])
 
+    const hideMenu = () => setShowMenu(false)
+    const toggleMenu = () => setShowMenu(value => !value)
+
     return (
-        <header className={styles.header}>
+        <header className={styles.header} id={HOME_URL_OR_STRING}>
             <div className={styles.mainHeader}>
                 <div className={styles.logoWrapper}>
                     <CursorLover>
@@ -54,14 +58,14 @@ export default function Header() {
                         <CursorLover>
                             <li>
                                 <Link href={ABOUT_ME_TAG}>
-                                    <a>About</a>
+                                    <a onClick={hideMenu}>About</a>
                                 </Link>
                             </li>
                         </CursorLover>
                         <CursorLover>
                             <li>
                                 <Link href={MY_BLOGS_TAG}>
-                                    <a>Blogs</a>
+                                    <a onClick={hideMenu}>Blogs</a>
                                 </Link>
                             </li>
                         </CursorLover>
@@ -69,7 +73,7 @@ export default function Header() {
                         <CursorLover>
                             <li>
                                 <Link href={MY_EXPERIENCE_TAG}>
-                                    <a>Experience</a>
+                                    <a onClick={hideMenu}>Experience</a>
                                 </Link>
                             </li>
                         </CursorLover>
@@ -77,7 +81,7 @@ export default function Header() {
                         <CursorLover>
                             <li>
                                 <Link href={MY_PROJECTS_TAG}>
-                                    <a>Projects</a>
+                                    <a onClick={hideMenu}>Projects</a>
                                 </Link>
                             </li>
                         </CursorLover>
@@ -85,7 +89,7 @@ export default function Header() {
                         <CursorLover>
                             <li>
                                 <Link href={CONTACT_ME_TAG}>
-                                    <a>Contact</a>
+                                    <a onClick={hideMenu}>Contact</a>
                                 </Link>
                             </li>
                         </CursorLover>
@@ -93,9 +97,7 @@ export default function Header() {
 
                     <div
                         className={styles.menuIconContainer}
-                        onClick={() => {
-                            setShowMenu(value => !value)
-                        }}>
+                        onClick={toggleMenu}>
                         <svg
                             // width="100"
                             // height="64"
@@ -113,9 +115,7 @@ export default function Header() {
                     className={`${styles.menuButton} ${
                         isScrolled || showMenu ? styles.active : styles.inactive
                     }`}
-                    onClick={() => {
-                        setShowMenu(value => !value)
-                    }}>
+                    onClick={toggleMenu}>
                     <svg
                         className={showMenu ? styles.active : styles.inactive}
                         // width="100"
@@ -138,7 +138,7 @@ export default function Header() {
                             className={styles.menuRightPartition}
                             onClick={() => {
                                 // toggle the menu if pressed out of context
-                                setShowMenu(false)
+                                hideMenu()
                             }}></div>
                         <div className={styles.menuPartition}>
                             <p className={styles.navigationHeading}>
@@ -148,32 +148,37 @@ export default function Header() {
                             <ol className={styles.navigationsList}>
                                 <li>
                                     <Link href={HOME_URL_OR_TAG}>
-                                        <a>Home</a>
+                                        <a onClick={hideMenu}>Home</a>
                                     </Link>
                                 </li>
+
                                 <li>
                                     <Link href={ABOUT_ME_TAG}>
-                                        <a>About</a>
+                                        <a onClick={hideMenu}>About</a>
                                     </Link>
                                 </li>
+
                                 <li>
                                     <Link href={MY_BLOGS_TAG}>
-                                        <a>Blogs</a>
+                                        <a onClick={hideMenu}>Blogs</a>
                                     </Link>
                                 </li>
+
                                 <li>
                                     <Link href={MY_EXPERIENCE_TAG}>
-                                        <a>Experience</a>
+                                        <a onClick={hideMenu}>Experience</a>
                                     </Link>
                                 </li>
+
                                 <li>
                                     <Link href={MY_PROJECTS_TAG}>
-                                        <a>Projects</a>
+                                        <a onClick={hideMenu}>Projects</a>
                                     </Link>
                                 </li>
+
                                 <li>
                                     <Link href={CONTACT_ME_TAG}>
-                                        <a>Contact</a>
+                                        <a onClick={hideMenu}>Contact</a>
                                     </Link>
                                 </li>
                             </ol>
