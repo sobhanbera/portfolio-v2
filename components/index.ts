@@ -6,4 +6,6 @@ import Footer from './Footer'
 import Greeting from './Greeting'
 import Name from './Name'
 
-export {InfiniteLoopingScrollView, Header, Footer, Greeting, Name}
+import CursorLover from './CursorLover'
+
+export {InfiniteLoopingScrollView, Header, Footer, Greeting, Name, CursorLover}
