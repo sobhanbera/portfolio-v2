@@ -16,15 +16,15 @@ export default function Home() {
         <div className={styles.mainRoot}>
             <Greeting />
 
-            <InfiniteLoopingScrollView verticalBackups={4}>
-                <main className={styles.root}>
-                    <Header />
+            {/* <InfiniteLoopingScrollView verticalBackups={4}> */}
+            <main className={styles.root}>
+                <Header />
 
-                    {/* <MainContainer /> */}
+                {/* <MainContainer /> */}
 
-                    <Footer />
-                </main>
-            </InfiniteLoopingScrollView>
+                <Footer />
+            </main>
+            {/* </InfiniteLoopingScrollView> */}
         </div>
     )
 }
