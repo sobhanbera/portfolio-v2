@@ -1,11 +1,11 @@
 .greeting {
-    position: absolute;
+    position: fixed;
     z-index: 10;
 
     background-color: rgba(var(--background-rgb), 0.5);
     backdrop-filter: blur(10px);
 
-    box-shadow: 0 10px 10px rgba(var(--black-rgb), 0.35);
+    box-shadow: 0 10px 10px rgba(var(--shadow-rgb), 0.35);
 
     display: flex;
     flex-direction: column;
