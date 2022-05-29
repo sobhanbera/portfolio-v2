@@ -15,6 +15,11 @@
 
     --black: #101010;
     --black-rgb: 16, 16, 16;
+
+    --shadow: #101010;
+    --shadow-rgb: 16, 16, 16;
+
+    --header-height: 85px;
 }
 
 // all typefaces for calibre font-family
@@ -80,10 +85,12 @@
 }
 
 * {
-    box-sizing: border-box;
-    transition: all 500ms;
     padding: 0;
     margin: 0;
+
+    box-sizing: border-box;
+
+    transition: all 0.45s ease-in-out 0s;
 
     outline: none;
     list-style: none;
@@ -92,23 +99,34 @@
 
     // background: transparent;
     font-family: Calibre, Inter, Karla, Roboto, Ubuntu, JetBrains, sans-serif;
-    letter-spacing: 0.5px;
+    font-weight: 400;
+    font-size: 16px;
 
-    user-select: none; // optional
+    color: var(--silver);
+
+    // user-select: none; // optional
 }
 
 html,
 body {
     width: 100%;
     height: 100%;
+
     background-color: var(--background);
 }
 
-body {
-    font: 700 1.5rem 'Helvetica Neue', 'Helvetica', sans-serif;
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
 }
 
-a {
-    color: inherit;
-    text-decoration: none;
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--silver-dim);
+    border-radius: 30px;
 }
