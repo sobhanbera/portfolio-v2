@@ -33,7 +33,36 @@
             font-size: 76px;
             font-weight: 600;
 
-            width: 100%;
+            width: max-content;
+            position: relative;
+
+            &::before {
+                content: '';
+                display: block;
+
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+
+                inset: 0 0 0 0;
+
+                background: var(--shadow);
+                z-index: -1;
+
+                transition: transform 0.56s ease;
+
+                transform: scaleX(0);
+                transform-origin: bottom right;
+            }
+
+            &:hover {
+                &::before {
+                    transform: scaleX(1);
+                    transform-origin: bottom left;
+                }
+            }
         }
 
         .workText {
