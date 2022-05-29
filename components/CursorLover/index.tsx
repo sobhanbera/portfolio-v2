@@ -109,7 +109,7 @@ export default function CursorLover(props: Props) {
     }, [attracterRef.current, x.current, y.current, width.current]) // without this dependency no animation is working
 
     return (
-        <div className={props.className} ref={attracterRef}>
+        <div className={props.className} ref={attracterRef} {...props}>
             {props.children}
         </div>
     )

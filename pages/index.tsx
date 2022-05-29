@@ -10,6 +10,7 @@ import {
     Header,
     InfiniteLoopingScrollView,
 } from '../components'
+import Introduction from '../containers/Intro'
 
 export default function Home() {
     return (
@@ -20,7 +21,9 @@ export default function Home() {
             <main className={styles.root}>
                 <Header />
 
-                {/* <MainContainer /> */}
+                <div className={styles.mainContainer}>
+                    <Introduction />
+                </div>
 
                 <Footer />
             </main>
