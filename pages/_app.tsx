@@ -4,6 +4,9 @@ import {useEffect} from 'react'
 import aos from 'aos'
 
 import '../styles/globals.scss'
+import '../styles/theming.scss'
+
+import ThemeSystem from '../contexts/ThemeSystem'
 
 function MyApp({Component, pageProps}: AppProps) {
     useEffect(() => {
@@ -17,7 +20,11 @@ function MyApp({Component, pageProps}: AppProps) {
         })
     }, [])
 
-    return <Component {...pageProps} />
+    return (
+        <ThemeSystem>
+            <Component {...pageProps} />
+        </ThemeSystem>
+    )
 }
 
 export default MyApp
