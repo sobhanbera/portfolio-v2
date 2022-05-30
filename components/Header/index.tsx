@@ -188,14 +188,16 @@ export default function Header() {
                                     <CursorLover>
                                         <li>
                                             <Link href={GITHUB_URL}>
-                                                <a>GitHub</a>
+                                                <a target={'_blank'}>GitHub</a>
                                             </Link>
                                         </li>
                                     </CursorLover>
                                     <CursorLover>
                                         <li>
                                             <Link href={LINKEDIN_URL}>
-                                                <a>Linkedin</a>
+                                                <a target={'_blank'}>
+                                                    Linkedin
+                                                </a>
                                             </Link>
                                         </li>
                                     </CursorLover>
@@ -203,7 +205,9 @@ export default function Header() {
                                     <CursorLover>
                                         <li>
                                             <Link href={INSTAGRAM_URL}>
-                                                <a>Instagram</a>
+                                                <a target={'_blank'}>
+                                                    Instagram
+                                                </a>
                                             </Link>
                                         </li>
                                     </CursorLover>
@@ -211,7 +215,9 @@ export default function Header() {
                                     <CursorLover>
                                         <li>
                                             <Link href={OLD_PORTFOLIO_URL}>
-                                                <a>Old Portfolio</a>
+                                                <a target={'_blank'}>
+                                                    Old Portfolio
+                                                </a>
                                             </Link>
                                         </li>
                                     </CursorLover>

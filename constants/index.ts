@@ -24,3 +24,5 @@ export const INSTAGRAM_URL = 'https://www.instagram.com/sobhanbera_' // link of 
 export const OLD_PORTFOLIO_URL = 'https://sobhanbera.github.io/oldportfolio' // the url of my old portfolio
 
 export const BLOGGING_WEBSITE = 'https://sobhanblogs.vercel.app/' // url of the blogging website
+
+export const COPYRIGHT_TEXT = '© 2022 Sobhan Bera'
