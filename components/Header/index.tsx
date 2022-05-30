@@ -34,6 +34,20 @@ export default function Header() {
         })
     }, [])
 
+    /**
+     * disable scroling when any kind of meny is opened
+     * this useEffect will do the same
+     */
+    useEffect(() => {
+        // if menu is enabled then disable the scrolling in body
+        if (showMenu) {
+            document.body.style.overflow = 'hidden'
+        } else {
+            // else enable it
+            document.body.style.overflow = 'scroll'
+        }
+    }, [showMenu])
+
     const hideMenu = () => setShowMenu(false)
     const toggleMenu = () => setShowMenu(value => !value)
 
