@@ -22,3 +22,5 @@ export const GITHUB_URL = 'https://github.com/sobhanbera' // link to my GitHub p
 export const LINKEDIN_URL = 'https://www.linkedin.com/in/sobhanbera' // url of my linkedin profile
 export const INSTAGRAM_URL = 'https://www.instagram.com/sobhanbera_' // link of instagram account
 export const OLD_PORTFOLIO_URL = 'https://sobhanbera.github.io/oldportfolio' // the url of my old portfolio
+
+export const BLOGGING_WEBSITE = 'https://sobhanblogs.vercel.app/' // url of the blogging website
