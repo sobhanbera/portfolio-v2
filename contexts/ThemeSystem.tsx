@@ -1,4 +1,5 @@
 import React, {createContext, useContext, useEffect, useState} from 'react'
+import Head from 'next/head'
 
 type ThemeTypes =
     | 'dark-default'
@@ -89,7 +90,13 @@ export default function ThemeSystem(props: Props) {
                         Math.floor(Math.random() * AvailableThemesArray.length)
                     ]
                 }> */}
+
+            <Head>
+                <meta name="theme-color" content="#000000" />
+            </Head>
+
             {props.children}
+
             {/* </div> */}
         </ThemeSystemContext.Provider>
     )

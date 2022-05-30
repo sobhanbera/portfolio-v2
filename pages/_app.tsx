@@ -11,7 +11,7 @@ import ThemeSystem from '../contexts/ThemeSystem'
 function MyApp({Component, pageProps}: AppProps) {
     useEffect(() => {
         aos.init({
-            duration: 3000,
+            duration: 1828.3268, // birthday digits (everybody?) :)...
             initClassName: 'sb-initial-anim',
             once: false,
             mirror: true,

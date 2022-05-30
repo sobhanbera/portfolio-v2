@@ -1,4 +1,5 @@
 import {useEffect, useRef} from 'react'
+import Head from 'next/head'
 
 import gsap from 'gsap'
 import {motion} from 'framer-motion'
@@ -11,10 +12,19 @@ import {
     InfiniteLoopingScrollView,
 } from '../components'
 import Introduction from '../containers/Intro'
+import AboutMe from '../containers/AboutMe'
+import MyBlogs from '../containers/MyBlogs'
 
 export default function Home() {
     return (
         <div className={styles.mainRoot}>
+            <Head>
+                <title>
+                    Sobhan Bera • Developer • Student • Competitive Programmer •
+                    Freelancer
+                </title>
+            </Head>
+
             <Greeting />
 
             {/* <InfiniteLoopingScrollView verticalBackups={4}> */}
@@ -23,6 +33,10 @@ export default function Home() {
 
                 <div className={styles.mainContainer}>
                     <Introduction />
+
+                    <AboutMe />
+
+                    <MyBlogs />
                 </div>
 
                 <Footer />
