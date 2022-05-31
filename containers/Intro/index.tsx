@@ -23,7 +23,7 @@ export default function Introduction() {
                 </p>
 
                 <button className={styles.resumeDownloadButton}>
-                    <Link href="">
+                    <Link href="/">
                         <a>{'Download my Resume!'}</a>
                     </Link>
                 </button>
