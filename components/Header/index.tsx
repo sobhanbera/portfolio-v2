@@ -18,8 +18,11 @@ import {
 
 import styles from '../../styles/components/header.module.scss'
 import {CursorLover} from '..'
+import {useThemeSystem} from '../../contexts/ThemeSystem'
 
 export default function Header() {
+    const {randomizeTheme, themeName} = useThemeSystem()
+
     // var to control a button which toggles meny when header is scrolled above
     const [isScrolled, setIsScrolled] = useState<boolean>(false)
 
@@ -195,6 +198,13 @@ export default function Header() {
                                         <a onClick={hideMenu}>Contact</a>
                                     </Link>
                                 </li>
+
+                                {/* theme randomizer button in header menu */}
+                                <p
+                                    className={styles.randomizeThemeBtn}
+                                    onClick={randomizeTheme}>
+                                    {`Theme - ${themeName}`}
+                                </p>
                             </ol>
 
                             <div className={styles.socialMediaContainer}>

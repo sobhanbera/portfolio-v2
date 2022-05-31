@@ -38,7 +38,15 @@
         }
 
         .backToTopButtonContainer {
-            padding: 5px 10px;
+            display: flex;
+            flex-direction: row;
+
+            .randomizeThemeBtn {
+                color: var(--primary);
+                padding: 0px 10px;
+
+                font-weight: 600;
+            }
         }
 
         .copyrightTextContainer,
@@ -46,6 +54,7 @@
         .backToTopButtonContainer {
             p {
                 cursor: pointer;
+
                 a {
                     cursor: pointer;
                     font-size: 16px;
@@ -71,6 +80,10 @@
                 p {
                     padding: 5px 0;
                 }
+            }
+
+            .backToTopButtonContainer {
+                padding: 8px 10px 20px 10px;
             }
         }
     }

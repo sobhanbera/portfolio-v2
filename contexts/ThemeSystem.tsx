@@ -30,6 +30,20 @@ const AvailableThemesArray: ThemeTypes[] = [
     'light-yellow',
     'light-red',
 ]
+export const ThemesName: Array<{themeCode: ThemeTypes; themeName: string}> = [
+    {themeCode: 'dark-default', themeName: 'Dark Default'},
+    {themeCode: 'dark-blue', themeName: 'Dark Blue'},
+    {themeCode: 'dark-pink', themeName: 'Dark Pink'},
+    {themeCode: 'dark-green', themeName: 'Dark Green'},
+    {themeCode: 'dark-yellow', themeName: 'Dark Yellow'},
+    {themeCode: 'dark-red', themeName: 'Dark Red'},
+    {themeCode: 'light-default', themeName: 'Light Default'},
+    {themeCode: 'light-blue', themeName: 'Light Blue'},
+    {themeCode: 'light-pink', themeName: 'Light Pink'},
+    {themeCode: 'light-green', themeName: 'Light Green'},
+    {themeCode: 'light-yellow', themeName: 'Light Yellow'},
+    {themeCode: 'light-red', themeName: 'Light Red'},
+]
 /**
  *
  * @param theme a string which denotes any of the above themes
@@ -38,19 +52,25 @@ const AvailableThemesArray: ThemeTypes[] = [
 function isOfTypeTheme(theme: ThemeTypes): theme is ThemeTypes {
     return AvailableThemesArray.includes(theme)
 }
-const DEFAULT_THEME: ThemeTypes = 'light-default'
+const DEFAULT_THEME: ThemeTypes = 'dark-default'
+const DEFAULT_THEME_NAME: string = 'Dark Default'
 
 interface ThemeSystemContextProp {
     theme: ThemeTypes
+    themeName: string
+    randomizeTheme(): any
 }
 const ThemeSystemContext = createContext<ThemeSystemContextProp>({
     theme: DEFAULT_THEME,
+    themeName: DEFAULT_THEME_NAME,
+    randomizeTheme: () => {},
 })
 interface Props {
     children: React.ReactChild
 }
 export default function ThemeSystem(props: Props) {
-    const [theme, setTheme] = useState<ThemeTypes>(DEFAULT_THEME)
+    const [theme, setTheme] = useState<ThemeTypes>(DEFAULT_THEME) // the theme code
+    const [themeName, setThemeName] = useState<string>(DEFAULT_THEME_NAME) // the actual themes name dedicatd to each theme code
 
     const setThemeLocal = () => {}
 
@@ -64,7 +84,12 @@ export default function ThemeSystem(props: Props) {
             ]
         setTheme(randomTheme)
         document.body.className = randomTheme
-        console.log('RANDOM', randomTheme)
+
+        // also update the theme name
+        const themeNameLocal = ThemesName.filter(
+            themeName => themeName.themeCode === randomTheme,
+        )
+        setThemeName(themeNameLocal[0].themeName)
     }
 
     useEffect(() => {
@@ -72,15 +97,19 @@ export default function ThemeSystem(props: Props) {
     }, [])
 
     useEffect(() => {
-        const themeLocal: ThemeTypes = localStorage.theme
-        const finalTheme = isOfTypeTheme(themeLocal)
-            ? themeLocal
-            : DEFAULT_THEME
-        setTheme(finalTheme)
+        // curently disabled the local storage feature
+        //
+        // const themeLocal: ThemeTypes = localStorage.theme
+        // const finalTheme = isOfTypeTheme(themeLocal)
+        //     ? themeLocal
+        //     : DEFAULT_THEME
+        // setTheme(finalTheme)
     }, [])
 
     const value = {
         theme,
+        themeName,
+        randomizeTheme: selectRandomTheme,
     }
     return (
         <ThemeSystemContext.Provider value={value}>

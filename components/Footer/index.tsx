@@ -8,8 +8,10 @@ import {
     LINKEDIN_URL,
     OLD_PORTFOLIO_URL,
 } from '../../constants'
+import {useThemeSystem} from '../../contexts/ThemeSystem'
 
 export default function Footer() {
+    const {themeName, randomizeTheme} = useThemeSystem()
     const scrollToTop = () => window.scrollTo(0, 0)
 
     return (
@@ -46,6 +48,11 @@ export default function Footer() {
                 </div>
 
                 <div className={styles.backToTopButtonContainer}>
+                    <p
+                        onClick={randomizeTheme}
+                        className={styles.randomizeThemeBtn}>
+                        {`Theme - ${themeName}`}
+                    </p>
                     <p onClick={scrollToTop}>Back To Top</p>
                 </div>
             </div>

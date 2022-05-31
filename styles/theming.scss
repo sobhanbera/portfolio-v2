@@ -260,6 +260,7 @@ body {
 
 ::-webkit-scrollbar {
     width: 13px;
+    height: 0; // to remove the horizontal scroll bar
 }
 
 ::-webkit-scrollbar-track {
