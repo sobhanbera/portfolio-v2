@@ -68,10 +68,10 @@ export default function CursorLover(props: Props) {
                     ease: 'power2.out',
                     // smoothOrigin: true,
                 })
-                console.log(
-                    clientX * (props.animationFactor || ANIMATION_FACTOR),
-                    clientY * (props.animationFactor || ANIMATION_FACTOR),
-                )
+                // console.log(
+                //     clientX * (props.animationFactor || ANIMATION_FACTOR),
+                //     clientY * (props.animationFactor || ANIMATION_FACTOR),
+                // )
             }
         },
         [x, y, width],

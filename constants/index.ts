@@ -26,3 +26,10 @@ export const OLD_PORTFOLIO_URL = 'https://sobhanbera.github.io/oldportfolio' // 
 export const BLOGGING_WEBSITE = 'https://sobhanblogs.vercel.app/' // url of the blogging website
 
 export const COPYRIGHT_TEXT = '© 2022 Sobhan Bera'
+
+// firebase related constants...
+export const CONTACTS_ROOT_REFERENCE = 'contacts_data'
+
+// regex constants
+export const EMAIL_REGEX =
+    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
