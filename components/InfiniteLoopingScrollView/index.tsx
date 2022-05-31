@@ -37,7 +37,8 @@ export default function InfiniteLoopingScrollView(
     useLayoutEffect(() => {
         if (contentRef.current) {
             setHeight(contentRef.current.offsetHeight)
-            scrollRef.current.scrollTop = backupHeight
+            // this line is not actually commented, since this component is not in use and this line is providing error while building, so...
+            // if (scrollRef) scrollRef?.current?.scrollTop = backupHeight
         }
     })
 
