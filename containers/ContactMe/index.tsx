@@ -3,10 +3,11 @@ import Link from 'next/link'
 
 import styles from '../../styles/containers/contactme.module.scss'
 import 'aos/dist/aos.css'
+import {CONTACT_ME_STRING} from '../../constants'
 
 export default function ContactMe() {
     return (
-        <div className={styles.contactMeContainer}>
+        <div className={styles.contactMeContainer} id={CONTACT_ME_STRING}>
             <div
                 className={styles.contactMeWrapper}
                 // data-aos="fade-up"
