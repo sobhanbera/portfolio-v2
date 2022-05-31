@@ -14,6 +14,7 @@ import {
 import Introduction from '../containers/Intro'
 import AboutMe from '../containers/AboutMe'
 import MyBlogs from '../containers/MyBlogs'
+import ContactMe from '../containers/ContactMe'
 
 export default function Home() {
     return (
@@ -37,6 +38,12 @@ export default function Home() {
                     <AboutMe />
 
                     <MyBlogs />
+
+                    {/* <ExperienceSection /> */}
+
+                    {/* <Projects /> */}
+
+                    <ContactMe />
                 </div>
 
                 <Footer />
