@@ -39,3 +39,4 @@ yarn-error.log*
 # custom ignored files
 .env
 /firebase/index.ts
+package-lock.json
