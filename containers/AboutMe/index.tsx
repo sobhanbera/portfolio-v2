@@ -21,18 +21,24 @@ export default function AboutMe() {
     return (
         <div className={styles.aboutMeContainer} id={ABOUT_ME_STRING}>
             <div className={styles.aboutMeWrapper}>
-                <div className={styles.aboutMeHeader} data-aos="fade-up">
+                <div className={styles.aboutMeHeader}>
                     <p className={styles.line}></p>
                     <p className={styles.aboutMeHeading}>{'About Me '}</p>
                     <p className={styles.line}></p>
                 </div>
 
-                <div className={styles.description} data-aos="fade-up">
-                    <p className={styles.aboutMeText}>{ABOUT_ME_TEXT1}</p>
+                <div className={styles.description}>
+                    <p className={styles.aboutMeText} data-aos="fade-up">
+                        {ABOUT_ME_TEXT1}
+                    </p>
 
-                    <p className={styles.aboutMeText}>{ABOUT_ME_TEXT2}</p>
+                    <p className={styles.aboutMeText} data-aos="fade-up">
+                        {ABOUT_ME_TEXT2}
+                    </p>
 
-                    <p className={styles.aboutMeText}>{ABOUT_ME_TEXT3}</p>
+                    <p className={styles.aboutMeText} data-aos="fade-up">
+                        {ABOUT_ME_TEXT3}
+                    </p>
                 </div>
                 <div></div>
             </div>
