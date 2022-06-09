@@ -1,30 +1,49 @@
 {
-  "name": "new-portfolio",
-  "private": true,
-  "scripts": {
-    "start": "next dev",
-    "build": "next build",
-    "next:start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "aos": "^2.3.4",
-    "firebase": "^9.8.2",
-    "framer-motion": "^5.0.2",
-    "gsap": "^3.9.1",
-    "next": "12.0.2",
-    "public-ip": "^4.0.4",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-fast-marquee": "^1.3.2",
-    "react-gsap": "^3.2.1",
-    "sass": "^1.52.1"
-  },
-  "devDependencies": {
-    "@types/node": "16.11.6",
-    "@types/react": "17.0.33",
-    "eslint": "^7.32.0",
-    "eslint-config-next": "12.0.2",
-    "typescript": "4.4.4"
-  }
+    "name": "new-portfolio",
+    "version": "0.0.1",
+    "private": true,
+    "description": "Portfolio website version 2.0",
+    "author": "Sobhan Bera",
+    "homepage": "https://github.com/sobhanbera/new-portfolio",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/sobhanbera/new-portfolio"
+    },
+    "scripts": {
+        "start": "next dev",
+        "build": "next build",
+        "next:start": "next start",
+        "lint": "next lint",
+        "prepare": "husky install"
+    },
+    "dependencies": {
+        "aos": "^2.3.4",
+        "firebase": "^9.8.2",
+        "framer-motion": "^5.0.2",
+        "gsap": "^3.9.1",
+        "next": "12.0.2",
+        "public-ip": "^4.0.4",
+        "react": "17.0.2",
+        "react-dom": "17.0.2",
+        "react-fast-marquee": "^1.3.2",
+        "react-gsap": "^3.2.1",
+        "sass": "^1.52.1"
+    },
+    "devDependencies": {
+        "@types/node": "16.11.6",
+        "@types/react": "17.0.33",
+        "eslint": "^7.32.0",
+        "eslint-config-next": "12.0.2",
+        "husky": "^8.0.1",
+        "typescript": "4.4.4"
+    },
+    "keywords": [
+        "sobhan",
+        "portfolio",
+        "website",
+        "resume",
+        "sobhanbera",
+        "portfolio website",
+        "description"
+    ]
 }
