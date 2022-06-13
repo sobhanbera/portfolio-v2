@@ -38,21 +38,45 @@ export default function Header() {
     }, [])
 
     /**
+     * all these scroll behavious should be performed under state update
+     * functions else greeting scroll controllers are not working that well
+     */
+    const hideMenu = () => {
+        setShowMenu(false)
+        // also nomalize the scroll
+        document.body.style.overflow = 'scroll'
+    }
+
+    /**
      * disable scroling when any kind of meny is opened
      * this useEffect will do the same
      */
-    useEffect(() => {
-        // if menu is enabled then disable the scrolling in body
-        if (showMenu) {
-            document.body.style.overflow = 'hidden'
-        } else {
-            // else enable it
-            document.body.style.overflow = 'scroll'
-        }
-    }, [showMenu])
+    //  useEffect(() => {
+    //     // if menu is enabled then disable the scrolling in body
+    //     if (showMenu) {
+    //         document.body.style.overflow = 'hidden'
+    //     } else {
+    //         // else enable it
+    //         document.body.style.overflow = 'scroll'
+    //     }
+    // }, [showMenu])
 
-    const hideMenu = () => setShowMenu(false)
-    const toggleMenu = () => setShowMenu(value => !value)
+    /**
+     * disable scroling when any kind of meny is opened
+     * this useEffect will do the same
+     *
+     * this will be perfomed in toggleMenu function instead of
+     * above useEffect for much more elegant state and scroll control
+     */
+    const toggleMenu = () =>
+        setShowMenu(value => {
+            // if menu is enabled then disable the scrolling in body
+            if (!value) document.body.style.overflow = 'hidden'
+            // else enable it
+            else document.body.style.overflow = 'scroll'
+
+            return !value
+        })
 
     return (
         <header className={styles.header} id={HOME_URL_OR_STRING}>

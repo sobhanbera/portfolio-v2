@@ -40,6 +40,12 @@ export default function Greeting() {
     // useState(false)
 
     useEffect(() => {
+        // at first just stop the scrolling so that unwanted scrolls don't take place
+        // next when the gretting is finished normalize the scroll behaviour
+        // that's it for the scroll UIUX
+        document.body.style.overflow = 'hidden'
+        console.log('value', document.body.style.overflow)
+
         // to update the greeting text
         setInterval(() => {
             setCurrentIndex(value => value + 1)
@@ -52,6 +58,7 @@ export default function Greeting() {
         setTimeout(() => {
             setShowGreeting(false)
             // setShowTapToContinueButton(false)
+            document.body.style.overflow = 'scroll'
         }, 3500)
 
         // 3 second is the deafult time when everything is loaded
@@ -67,6 +74,8 @@ export default function Greeting() {
             }`}
             onClick={() => {
                 setShowGreeting(false)
+                // normalizing the overflow property of the body
+                document.body.style.overflow = 'scroll'
             }}>
             {/* bare component, just to maintain the space-between properties in css */}
             {/* <div className={styles.flexBalancer}></div> */}

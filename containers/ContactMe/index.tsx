@@ -61,20 +61,21 @@ export default function ContactMe() {
         }
     }
 
+    // disabled this for sometime to test and figure out other components using the same
     /**
      * disable scroling when any kind of meny is opened
      * this useEffect will do the same
      * this is same as the header menu function
      */
-    useEffect(() => {
-        // if menu is enabled then disable the scrolling in body
-        if (prompt) {
-            document.body.style.overflow = 'hidden'
-        } else {
-            // else enable it
-            document.body.style.overflow = 'scroll'
-        }
-    }, [prompt])
+    // useEffect(() => {
+    //     // if menu is enabled then disable the scrolling in body
+    //     if (prompt) {
+    //         document.body.style.overflow = 'hidden'
+    //     } else {
+    //         // else enable it
+    //         document.body.style.overflow = 'scroll'
+    //     }
+    // }, [prompt])
 
     return (
         <div className={styles.contactMeContainer} id={CONTACT_ME_STRING}>
