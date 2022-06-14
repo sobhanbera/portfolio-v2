@@ -76,7 +76,7 @@ export default function MyBlogs() {
                                         <button className={styles.visitButton}>
                                             <a
                                                 target={'_blank'}
-                                                href={`${BLOGGING_WEBSITE}${blog.link}?data=${blog.id}`}>
+                                                href={blog.mediumLink}>
                                                 <svg
                                                     width="24"
                                                     height="24"
@@ -97,7 +97,7 @@ export default function MyBlogs() {
                                         <button className={styles.visitButton}>
                                             <a
                                                 target={'_blank'}
-                                                href={`${BLOGGING_WEBSITE}${blog.link}?data=${blog.id}`}>
+                                                href={blog.mediumLink}>
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     viewBox="0 0 30 30">
@@ -109,7 +109,7 @@ export default function MyBlogs() {
                                         <button className={styles.visitButton}>
                                             <a
                                                 target={'_blank'}
-                                                href={blog.mediumLink}>
+                                                href={`${BLOGGING_WEBSITE}${blog.link}?data=${blog.id}`}>
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     viewBox="0 0 48 48">

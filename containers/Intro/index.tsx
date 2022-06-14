@@ -9,7 +9,7 @@ import {RESUME_LOCAL_URL} from '../../constants'
 export default function Introduction() {
     return (
         <div className={styles.introContainer}>
-            <div className={styles.introWrapper} data-aos="fade-up">
+            <div className={styles.introWrapper}>
                 <p className={styles.greetingText}>{'Hi There, I am ->'}</p>
 
                 <p className={styles.nameText}>{'Sobhan Bera.'}</p>
