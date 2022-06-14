@@ -1,8 +1,10 @@
 import React from 'react'
 import Link from 'next/link'
 
-import styles from '../../styles/containers/intro.module.scss'
 import 'aos/dist/aos.css'
+
+import styles from '../../styles/containers/intro.module.scss'
+import {RESUME_LOCAL_URL} from '../../constants'
 
 export default function Introduction() {
     return (
@@ -23,8 +25,10 @@ export default function Introduction() {
                 </p>
 
                 <button className={styles.resumeDownloadButton}>
-                    <Link href="/">
-                        <a>{'Download my Resume!'}</a>
+                    <Link href={RESUME_LOCAL_URL}>
+                        <a href={RESUME_LOCAL_URL} target="_blank" download>
+                            {'Download my Resume!'}
+                        </a>
                     </Link>
                 </button>
             </div>
