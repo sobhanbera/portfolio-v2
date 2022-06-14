@@ -101,6 +101,8 @@
         }
 
         .submitBtn {
+            position: relative;
+
             cursor: pointer;
 
             font-size: 16px;
@@ -114,8 +116,45 @@
             padding: 15px 30px;
             margin: 20px 0px;
 
+            &[disabled] {
+                border-color: rgba(var(--primary-rgb), 0.1);
+                color: #7f7f7f;
+
+                background-color: rgba(var(--primary-rgb), 0.1);
+            }
+
             &:hover {
                 background-color: rgba(var(--primary-rgb), 0.1);
+            }
+
+            .loadingAnimation {
+                display: inline-block;
+
+                height: 100%;
+                width: 100%;
+
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                div {
+                    position: absolute;
+
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+
+                    border: 2.5px solid var(--primary);
+                    opacity: 1;
+                    border-radius: 50%;
+                    animation: loadingAnimation 1s cubic-bezier(0, 0.2, 0.8, 1)
+                        infinite;
+
+                    &:nth-child(2) {
+                        animation-delay: -0.5s;
+                    }
+                }
             }
         }
     }
@@ -198,6 +237,31 @@
                 }
             }
         }
+    }
+}
+
+@keyframes loadingAnimation {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+    4.9% {
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+    5% {
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+    100% {
+        // by calculating the height and width of the button it seems that height < width and height is almost 49px
+        // so setting both the height and width with a safe number
+        width: 45px;
+        height: 45px;
+        opacity: 0;
     }
 }
 

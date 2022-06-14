@@ -6,12 +6,15 @@ import {CONTACT_ME_STRING, EMAIL_REGEX} from '../../constants'
 import {addNewContactData} from '../../firebase/firebase'
 
 export default function ContactMe() {
-    const [fullname, setFullname] = useState('')
-    const [email, setEmail] = useState('')
-    const [org, setOrganization] = useState('')
-    const [message, setMessage] = useState('')
+    // these are some of the inputs for the contact form
+    const [fullname, setFullname] = useState('') // full name of the person who want to contact
+    const [email, setEmail] = useState('') // email of the same person
+    const [org, setOrganization] = useState('') // optional organisation name if he/she has any
+    const [message, setMessage] = useState('') // the actual message they want to send
 
-    const [prompt, setPrompt] = useState('')
+    const [loading, setLoading] = useState(false) // while the message is being sending
+
+    const [prompt, setPrompt] = useState('') // any propmt
 
     const addContactDetails = () => {
         if (fullname.length <= 5) {
@@ -31,8 +34,11 @@ export default function ContactMe() {
                 'The message you have entered is empty. Please enter some valid message.',
             )
         } else {
+            setLoading(true)
             addNewContactData(fullname, email, org, message).then(res => {
                 if (res === true) {
+                    setLoading(false)
+
                     setPrompt('Thanks for contacting!')
                     // if the prompt is shown then disable it after sometime
                     setTimeout(() => {
@@ -50,9 +56,14 @@ export default function ContactMe() {
                     /**
                      * now sending a temporary mail to this email
                      * for a confirmation or like a thanking mail
+                     *
+                     * this is optional
                      */
                     // TODO
                 } else {
+                    // disable loading and all other stuffs when error
+                    setLoading(false)
+
                     setPrompt(
                         "You message can't be sent at the time. This maybe due to any technical failure. Sorry for the inconvineince!",
                     )
@@ -140,8 +151,18 @@ export default function ContactMe() {
 
                     <button
                         className={styles.submitBtn}
-                        onClick={addContactDetails}>
+                        onClick={addContactDetails}
+                        // if already sending a message then button will be disabled
+                        disabled={loading}>
                         {'Submit!'}
+
+                        {/* show loading animation when the seding process is ongoing */}
+                        {loading && (
+                            <div className={styles.loadingAnimation}>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        )}
                     </button>
                 </div>
             </div>
