@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Karla:wght@200;300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto:wght@100;400;500;700;900&display=swap');
+
+// all typefaces for calibre font-family
+@font-face {
+    font-family: Calibre;
+    src: url('../public/fonts/CalibreThin.otf');
+    font-weight: 200;
+}
+@font-face {
+    font-family: Calibre;
+    src: url('../public/fonts/CalibreThinItalic.otf');
+    font-weight: 200;
+    font-style: italic;
+}
+@font-face {
+    font-family: Calibre;
+    src: url('../public/fonts/CalibreLight.otf');
+    font-weight: 300;
+}
+@font-face {
+    font-family: Calibre;
+    src: url('../public/fonts/CalibreLightItalic.otf');
+    font-weight: 300;
+    font-style: italic;
+}
+@font-face {
+    font-family: Calibre;
+    src: url('../public/fonts/CalibreRegular.otf');
+    font-weight: 400;
+}
+@font-face {
+    font-family: Calibre;
+    src: url('../public/fonts/CalibreRegularItalic.otf');
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: Calibre;
+    src: url('../public/fonts/CalibreMedium.otf');
+    font-weight: 500;
+}
+@font-face {
+    font-family: Calibre;
+    src: url('../public/fonts/CalibreMediumItalic.otf');
+    font-weight: 500;
+    font-style: italic;
+}
+@font-face {
+    font-family: Calibre;
+    src: url('../public/fonts/CalibreSemibold.otf');
+    font-weight: 600;
+}
+@font-face {
+    font-family: Calibre;
+    src: url('../public/fonts/CalibreSemiboldItalic.otf');
+    font-weight: 600;
+    font-style: italic;
+}
+@font-face {
+    font-family: Calibre;
+    src: url('../public/fonts/CalibreBold.otf');
+    font-weight: 700;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+
+    box-sizing: border-box;
+
+    transition: all 0.33s ease-in-out 0s;
+
+    outline: none;
+    border: none;
+    list-style: none;
+    list-style-type: none;
+    text-decoration: none;
+
+    // background: transparent;
+    font-family: Calibre, Inter, Karla, Roboto, Ubuntu, JetBrains, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}

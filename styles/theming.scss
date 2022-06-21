@@ -1,0 +1,276 @@
+:root {
+    --black: #101010;
+    --black-rgb: 16, 16, 16;
+
+    --white: #efefef;
+    --white-rgb: 239, 239, 239;
+
+    --header-height: 85px;
+}
+
+.dark-default {
+    --background: #0a192f;
+    --background-rgb: 10, 25, 47;
+
+    --background-light: #233554;
+    --background-light-rgb: 35, 53, 84;
+
+    --primary: #64daff;
+    --primary-rgb: 100, 218, 255;
+
+    --silver: #ccd6f6;
+    --silver-rgb: 204, 214, 246;
+
+    --silver-dim: #8892b0;
+    --silver-dim-rgb: 136, 146, 176;
+
+    --shadow: #020c1b;
+    --shadow-rgb: 2, 12, 27;
+}
+.dark-blue {
+    --background: #0a192f;
+    --background-rgb: 10, 25, 47;
+
+    --background-light: #233554;
+    --background-light-rgb: 35, 53, 84;
+
+    --primary: #64daff;
+    --primary-rgb: 100, 218, 255;
+
+    --silver: #ccd6f6;
+    --silver-rgb: 204, 214, 246;
+
+    --silver-dim: #8892b0;
+    --silver-dim-rgb: 136, 146, 176;
+
+    --shadow: #020c1b;
+    --shadow-rgb: 2, 12, 27;
+}
+.dark-pink {
+    --background: #190a2f;
+    --background-rgb: 25, 10, 47;
+
+    --background-light: #352354;
+    --background-light-rgb: 53, 35, 84;
+
+    --primary: #da64ff;
+    --primary-rgb: 218, 100, 255;
+
+    --silver: #d6ccf6;
+    --silver-rgb: 214, 204, 246;
+
+    --silver-dim: #9288b0;
+    --silver-dim-rgb: 146, 136, 176;
+
+    --shadow: #0c021b;
+    --shadow-rgb: 12, 2, 27;
+}
+.dark-green {
+    --background: #0a2f19;
+    --background-rgb: 10, 47, 25;
+
+    --background-light: #235435;
+    --background-light-rgb: 35, 84, 53;
+
+    --primary: #64ffda;
+    --primary-rgb: 100, 255, 218;
+
+    --silver: #ccf6d6;
+    --silver-rgb: 204, 246, 214;
+
+    --silver-dim: #88b092;
+    --silver-dim-rgb: 136, 176, 146;
+
+    --shadow: #021b0c;
+    --shadow-rgb: 2, 27, 12;
+}
+.dark-yellow {
+    --background: #2f190a;
+    --background-rgb: 47, 25, 10;
+
+    --background-light: #543523;
+    --background-light-rgb: 84, 53, 35;
+
+    --primary: #ffda64;
+    --primary-rgb: 255, 218, 100;
+
+    --silver: #f6d6cc;
+    --silver-rgb: 246, 214, 204;
+
+    --silver-dim: #b09288;
+    --silver-dim-rgb: 176, 146, 136;
+
+    --shadow: #1b0c02;
+    --shadow-rgb: 27, 12, 2;
+}
+.dark-red {
+    --background: #2f0a19;
+    --background-rgb: 47, 10, 25;
+
+    --background-light: #542335;
+    --background-light-rgb: 84, 35, 53;
+
+    --primary: #ff64da;
+    --primary-rgb: 255, 100, 218;
+
+    --silver: #f6ccd6;
+    --silver-rgb: 246, 204, 214;
+
+    --silver-dim: #b08892;
+    --silver-dim-rgb: 176, 136, 146;
+
+    --shadow: #1b020c;
+    --shadow-rgb: 27, 2, 12;
+}
+/**
+ light theme starts from here
+*/
+.light-default {
+    --background: #dfdfdf;
+    --background-rgb: 223, 223, 223;
+
+    --background-light: #afafaf;
+    --background-light-rgb: 175, 175, 175;
+
+    --primary: #0f60b6;
+    --primary-rgb: 15, 96, 182;
+
+    --silver: #0a192f;
+    --silver-rgb: 10, 25, 47;
+
+    --silver-dim: #586280;
+    --silver-dim-rgb: 88, 98, 128;
+
+    --shadow: #bfbfbf;
+    --shadow-rgb: 191, 191, 191;
+}
+.light-blue {
+    --background: #dfdfdf;
+    --background-rgb: 223, 223, 223;
+
+    --background-light: #afafaf;
+    --background-light-rgb: 175, 175, 175;
+
+    --primary: #0f60b6;
+    --primary-rgb: 15, 96, 182;
+
+    --silver: #0a192f;
+    --silver-rgb: 10, 25, 47;
+
+    --silver-dim: #586280;
+    --silver-dim-rgb: 88, 98, 128;
+
+    --shadow: #bfbfbf;
+    --shadow-rgb: 191, 191, 191;
+}
+.light-pink {
+    --background: #dfdfdf;
+    --background-rgb: 223, 223, 223;
+
+    --background-light: #afafaf;
+    --background-light-rgb: 175, 175, 175;
+
+    --primary: #600fb6;
+    --primary-rgb: 96, 15, 182;
+
+    --silver: #190a2f;
+    --silver-rgb: 25, 10, 47;
+
+    --silver-dim: #625880;
+    --silver-dim-rgb: 98, 88, 128;
+
+    --shadow: #bfbfbf;
+    --shadow-rgb: 191, 191, 191;
+}
+.light-green {
+    --background: #dfdfdf;
+    --background-rgb: 223, 223, 223;
+
+    --background-light: #afafaf;
+    --background-light-rgb: 175, 175, 175;
+
+    --primary: #0fb660;
+    --primary-rgb: 15, 182, 96;
+
+    --silver: #0a2f19;
+    --silver-rgb: 10, 47, 25;
+
+    --silver-dim: #588062;
+    --silver-dim-rgb: 88, 128, 98;
+
+    --shadow: #bfbfbf;
+    --shadow-rgb: 191, 191, 191;
+}
+.light-yellow {
+    --background: #dfdfdf;
+    --background-rgb: 223, 223, 223;
+
+    --background-light: #afafaf;
+    --background-light-rgb: 175, 175, 175;
+
+    --primary: #b6600f;
+    --primary-rgb: 182, 96, 15;
+
+    --silver: #2f190a;
+    --silver-rgb: 47, 25, 10;
+
+    --silver-dim: #806258;
+    --silver-dim-rgb: 128, 98, 88;
+
+    --shadow: #bfbfbf;
+    --shadow-rgb: 191, 191, 191;
+}
+.light-red {
+    --background: #dfdfdf;
+    --background-rgb: 223, 223, 223;
+
+    --background-light: #afafaf;
+    --background-light-rgb: 175, 175, 175;
+
+    --primary: #b60f60;
+    --primary-rgb: 182, 15, 96;
+
+    --silver: #2f0a19;
+    --silver-rgb: 47, 10, 25;
+
+    --silver-dim: #805862;
+    --silver-dim-rgb: 128, 88, 98;
+
+    --shadow: #bfbfbf;
+    --shadow-rgb: 191, 191, 191;
+}
+
+* {
+    color: var(--silver);
+
+    &::selection {
+        background: var(--background-light);
+        color: var(--silver);
+    }
+}
+
+html,
+body {
+    background-color: var(--background);
+
+    line-height: 1.285;
+
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 13px;
+    height: 0; // to remove the horizontal scroll bar
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(var(--silver-dim-rgb), 0.6);
+    border-radius: 30px;
+
+    border: 4px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+}

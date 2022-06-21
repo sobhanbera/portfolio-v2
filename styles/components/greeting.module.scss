@@ -1,0 +1,122 @@
+.greeting {
+    cursor: wait;
+
+    position: fixed;
+    z-index: 10;
+
+    background-color: rgba(var(--background-rgb), 0.5);
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 10px 10px rgba(var(--shadow-rgb), 0.35);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 100%;
+    height: 100vh;
+    transition: all 2s;
+
+    // default properties
+    &.active {
+        top: 0;
+        left: 0;
+    }
+    &.inactive {
+        top: -200%;
+        left: 0;
+    }
+
+    .flexBalancer {
+        // bare minimum component just to maintain the flexbox
+    }
+
+    .greetingContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h3 {
+            font-size: 35px;
+            letter-spacing: 1px;
+
+            color: var(--silver);
+            height: 50px;
+        }
+
+        h4 {
+            font-size: 20px;
+            // font-weight: 500;
+
+            color: var(--silver);
+        }
+
+        h3,
+        h4,
+        .nameContainer {
+            margin: 20px 0 20px 0;
+        }
+
+        h4 {
+            margin: 20px 0 0px 0;
+        }
+
+        .nameContainer {
+            svg {
+                height: 50px;
+            }
+        }
+    }
+
+    .greetingContinue {
+        height: 20px;
+
+        span {
+            height: 20px;
+            display: block;
+
+            color: var(--silver-dim);
+            font-size: 15px;
+
+            transition: all 3s;
+            animation: scaler 0.5s;
+        }
+    }
+}
+
+@keyframes scaler {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .greeting {
+        .greetingContainer {
+            h3 {
+                font-size: 30px;
+            }
+
+            h4 {
+                font-size: 18px;
+            }
+
+            .nameContainer {
+                svg {
+                    height: 40px;
+                }
+            }
+        }
+
+        .greetingContinue {
+            span {
+                font-size: 12px;
+            }
+        }
+    }
+}

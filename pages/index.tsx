@@ -1,33 +1,54 @@
-import type {NextPage} from 'next'
-import {useEffect, useState} from 'react'
+import {useEffect, useRef} from 'react'
+import Head from 'next/head'
+
+import gsap from 'gsap'
 import {motion} from 'framer-motion'
 
-import styles from '../styles/Home.module.css'
+import styles from '../styles/pages/landing.module.scss'
+import {
+    Footer,
+    Greeting,
+    Header,
+    InfiniteLoopingScrollView,
+} from '../components'
+import Introduction from '../containers/Intro'
+import AboutMe from '../containers/AboutMe'
+import MyBlogs from '../containers/MyBlogs'
+import ContactMe from '../containers/ContactMe'
 
-const Home: NextPage = () => {
-    const [color, setColor] = useState('black')
-
-    const listenScrollEvent = e => {
-        if (window.scrollY > 400) {
-            setColor('black')
-        } else {
-            setColor('white')
-        }
-    }
-
-    useEffect(() => {
-        window.addEventListener('scroll', listenScrollEvent)
-    }, [])
-
+export default function Home() {
     return (
-        <motion.div
-            animate={{
-                background: color,
-            }}
-            className={styles.container}>
-            asdf
-        </motion.div>
+        <div className={styles.mainRoot}>
+            <Head>
+                <title>
+                    Sobhan Bera • Developer • Student • Competitive Programmer •
+                    Freelancer
+                </title>
+            </Head>
+
+            <Greeting />
+
+            {/* <InfiniteLoopingScrollView verticalBackups={4}> */}
+            <main className={styles.root}>
+                <Header />
+
+                <div className={styles.mainContainer}>
+                    <Introduction />
+
+                    <AboutMe />
+
+                    <MyBlogs />
+
+                    {/* <ExperienceSection /> */}
+
+                    {/* <Projects /> */}
+
+                    <ContactMe />
+                </div>
+
+                <Footer />
+            </main>
+            {/* </InfiniteLoopingScrollView> */}
+        </div>
     )
 }
-
-export default Home

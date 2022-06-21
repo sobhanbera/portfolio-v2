@@ -35,3 +35,8 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+
+# custom ignored files
+.env
+/firebase/index.ts
+package-lock.json

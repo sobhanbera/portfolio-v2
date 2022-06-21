@@ -1,0 +1,197 @@
+.introContainer {
+    min-height: 100vh;
+
+    width: 100%;
+    height: 100%;
+
+    .introWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        margin: auto;
+
+        max-width: 1000px;
+        width: 1200px;
+        min-height: 80vh;
+
+        .greetingText {
+            font-size: 16px;
+            font-weight: 400;
+            font-family: Fira Code;
+
+            color: var(--primary);
+
+            margin: 25px 3px;
+            width: 100%;
+        }
+
+        .nameText {
+            font-size: 76px;
+            font-weight: 600;
+
+            width: max-content;
+            position: relative;
+
+            &::before {
+                content: '';
+                display: block;
+
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+
+                inset: 0 0 0 0;
+
+                background: var(--shadow);
+                z-index: -1;
+
+                transition: transform 0.56s ease;
+
+                transform: scaleX(0);
+                transform-origin: bottom right;
+            }
+
+            &:hover {
+                &::before {
+                    transform: scaleX(1);
+                    transform-origin: bottom left;
+                }
+            }
+        }
+
+        .workText {
+            font-size: 70px;
+            font-weight: 600;
+
+            color: var(--silver-dim);
+
+            width: 100%;
+        }
+
+        .currentStatusText {
+            font-size: 20px;
+
+            color: var(--silver-dim);
+
+            max-width: 550px;
+            width: 100%;
+            margin: 20px 0px 35px 0px;
+        }
+
+        .resumeDownloadButton {
+            cursor: pointer;
+
+            font-family: Karla;
+
+            background-color: transparent;
+
+            border-radius: 4px;
+            border: 1px solid var(--primary);
+
+            padding: 18px 30px;
+            margin: 20px 0px;
+
+            &:hover {
+                background-color: rgba(var(--primary-rgb), 0.1);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .introContainer {
+        .introWrapper {
+            width: 800px;
+
+            .nameText {
+                font-size: 65px;
+            }
+
+            .workText {
+                font-size: 62px;
+                max-width: 650px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .introContainer {
+        .introWrapper {
+            width: 600px;
+
+            .nameText {
+                font-size: 60px;
+            }
+
+            .workText {
+                font-size: 56px;
+                max-width: 650px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .introContainer {
+        .introWrapper {
+            width: 500px;
+
+            .nameText {
+                font-size: 50px;
+            }
+
+            .workText {
+                font-size: 46px;
+                max-width: 650px;
+            }
+
+            .resumeDownloadButton {
+                padding: 14px 24px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .introContainer {
+        .introWrapper {
+            width: 380px;
+
+            .nameText {
+                font-size: 40px;
+            }
+
+            .workText {
+                font-size: 36px;
+                max-width: 650px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .introContainer {
+        .introWrapper {
+            width: 100%;
+            padding: 0 50px;
+
+            .nameText {
+                font-size: 35px;
+            }
+
+            .workText {
+                font-size: 32px;
+                max-width: 650px;
+            }
+
+            .currentStatusText {
+                font-size: 16px;
+            }
+        }
+    }
+}
