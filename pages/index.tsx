@@ -14,6 +14,8 @@ import {
 import Introduction from '../containers/Intro'
 import AboutMe from '../containers/AboutMe'
 import MyBlogs from '../containers/MyBlogs'
+import SkillsSection from '../containers/SkillsSection'
+// import Projects from '../containers/Projects'
 import ContactMe from '../containers/ContactMe'
 
 export default function Home() {
@@ -39,7 +41,7 @@ export default function Home() {
 
                     <MyBlogs />
 
-                    {/* <ExperienceSection /> */}
+                    <SkillsSection />
 
                     {/* <Projects /> */}
 
