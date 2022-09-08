@@ -1,6 +1,6 @@
 import {ref, set} from 'firebase/database'
 
-import {database} from '.'
+import {database} from './template'
 import {CONTACTS_ROOT_REFERENCE} from '../constants'
 
 /**
