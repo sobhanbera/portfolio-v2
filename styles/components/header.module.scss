@@ -360,9 +360,16 @@
                             font-weight: 600;
 
                             text-align: center;
+
+                            display: inline;
                             color: var(--primary);
 
-                            padding: 10px 20px;
+                            padding: 10px 10px 5px 10px;
+                            border-radius: 5px;
+
+                            &:hover {
+                                background-color: var(--background-light);
+                            }
                         }
                     }
 
