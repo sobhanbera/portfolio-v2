@@ -1,0 +1,55 @@
+.floatingFooter {
+    .floatingFooterContainer {
+        .floatingFooterLeft {
+            position: fixed;
+            left: 20px;
+            right: auto;
+            bottom: 0px;
+
+            ul {
+                width: 48px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+
+                li {
+                    padding-top: 5px;
+
+                    a {
+                        svg {
+                            transition: all 1s;
+                            -webkit-transition: all 1s;
+
+                            width: 20px;
+                            height: 20px;
+                            margin-bottom: 12px;
+                            stroke-width: 1.5px;
+
+                            color: var(--silver);
+
+                            &:hover {
+                                color: var(--primary);
+                                transform: scale(1.15);
+                            }
+                        }
+                    }
+
+                    .floatingVerticalLine {
+                        display: block;
+                        width: 1px;
+                        height: 90px;
+                        margin-top: 15px;
+                        margin-right: auto;
+                        background-color: var(--silver);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .floatingFooter {
+    }
+}

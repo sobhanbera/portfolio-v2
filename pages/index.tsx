@@ -1,15 +1,16 @@
-import {useEffect, useRef} from 'react'
+import {} from 'react'
 import Head from 'next/head'
 
-import gsap from 'gsap'
-import {motion} from 'framer-motion'
+// import gsap from 'gsap'
+// import {motion} from 'framer-motion'
 
 import styles from '../styles/pages/landing.module.scss'
 import {
     Footer,
+    FloatingFooter,
     Greeting,
     Header,
-    InfiniteLoopingScrollView,
+    // InfiniteLoopingScrollView,
 } from '../components'
 import Introduction from '../containers/Intro'
 import AboutMe from '../containers/AboutMe'
@@ -22,10 +23,7 @@ export default function Home() {
     return (
         <div className={styles.mainRoot}>
             <Head>
-                <title>
-                    Sobhan Bera • Developer • Student • Competitive Programmer •
-                    Freelancer
-                </title>
+                <title>Sobhan Bera • Software Developer</title>
             </Head>
 
             <Greeting />
@@ -48,7 +46,11 @@ export default function Home() {
                     <ContactMe />
                 </div>
 
-                <Footer />
+                <div>
+                    <FloatingFooter />
+
+                    <Footer />
+                </div>
             </main>
             {/* </InfiniteLoopingScrollView> */}
         </div>
