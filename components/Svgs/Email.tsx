@@ -2,8 +2,8 @@ export default function EmailSvg() {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 485 485"
             role="img"
+            viewBox="0 0 485 485"
             fill="none"
             stroke="currentColor"
             strokeWidth="2">
