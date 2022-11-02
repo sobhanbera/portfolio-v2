@@ -2,7 +2,7 @@
     .floatingFooterContainer {
         .floatingFooterLeft {
             position: fixed;
-            left: 20px;
+            left: 40px;
             right: auto;
             bottom: 0px;
 
@@ -18,8 +18,8 @@
 
                     a {
                         svg {
-                            transition: all 0.5s;
-                            -webkit-transition: all 0.5s;
+                            transition: all 0.3s;
+                            -webkit-transition: all 0.3s;
 
                             width: 20px;
                             height: 20px;
@@ -41,7 +41,7 @@
                     }
 
                     // this is the special svg icon, this is the email icon which only works with fill and not with color tag in css
-                    &:nth-child(1) {
+                    &:nth-child(4) {
                         a {
                             svg {
                                 fill: var(--silver);

@@ -25,14 +25,6 @@ export default function FloatingFooter() {
                 <div className={styles.floatingFooterLeft}>
                     <ul>
                         <li>
-                            <Link href={EMAIL_ID_REDIRECT_URL}>
-                                <a className={styles.floatingFooterLink}>
-                                    <EmailSvg />
-                                </a>
-                            </Link>
-                        </li>
-
-                        <li>
                             <Link href={GITHUB_URL}>
                                 <a className={styles.floatingFooterLink}>
                                     <GitHubSvg />
@@ -52,6 +44,14 @@ export default function FloatingFooter() {
                             <Link href={INSTAGRAM_URL}>
                                 <a className={styles.floatingFooterLink}>
                                     <InstagramSvg />
+                                </a>
+                            </Link>
+                        </li>
+
+                        <li>
+                            <Link href={EMAIL_ID_REDIRECT_URL}>
+                                <a className={styles.floatingFooterLink}>
+                                    <EmailSvg />
                                 </a>
                             </Link>
                         </li>
