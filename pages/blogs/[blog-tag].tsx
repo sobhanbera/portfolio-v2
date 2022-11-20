@@ -22,6 +22,7 @@ const BareBlogData: Blog = {
     id: '',
     title: '',
     body: '',
+    bodyHeader: '',
     shortDescription: '',
     readTime: 0,
     timestamp: 0,
