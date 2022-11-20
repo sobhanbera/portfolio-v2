@@ -15,33 +15,15 @@
 export interface Blog {
     id: string
     title: string
-    body?: string
+    bodyHeader: string
+    body: string
+    readTime: number
     shortDescription: string
     timestamp: Date | number
     artwork: string
     pageTitle: string
-    isBlog: boolean
     link: string
     mediumLink: string
     property: string
     tags: string[]
 }
-
-export const BlogsList: Blog[] = [
-    {
-        id: '1',
-        title: 'Deep Dive To Open Source',
-        shortDescription:
-            'Open-source software could change the complete workflow of a team or organization. Want to learn how? Want to know about Git? Follow the link!',
-        timestamp: 1643029520306,
-        artwork:
-            'https://miro.medium.com/max/1400/1*7JtRMnaocFHa2rv1n1YVBQ.png',
-        pageTitle: 'All about your first contribution in GitHub | Sobhan Bera',
-        isBlog: true,
-        link: 'deep-dive-to-open-source-with-github',
-        mediumLink:
-            'https://medium.com/dsc-ghrce/open-source-by-sobhanbera-2388c07b5117',
-        property: 'First Blog',
-        tags: ['Open Source', 'Git', 'GitHub', 'Command', 'Contribute'],
-    },
-]

@@ -13,6 +13,8 @@ export default function SkillsSection() {
                     <p className={styles.skillsHeading}>{'Technologies'}</p>
                     <p className={styles.line}></p>
                 </div>
+
+                <div className={styles.skillsContent}>TODO</div>
             </div>
         </div>
     )
