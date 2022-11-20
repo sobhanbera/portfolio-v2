@@ -18,6 +18,10 @@ import {
     WebsiteSvg,
 } from './Svgs'
 
+import MetaDatas from './MetaData'
+import BlogCard from './BlogCard'
+export {MetaDatas, BlogCard}
+
 export {
     InfiniteLoopingScrollView,
     Header,
