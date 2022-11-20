@@ -20,7 +20,8 @@ import {
 
 import MetaDatas from './MetaData'
 import BlogCard from './BlogCard'
-export {MetaDatas, BlogCard}
+import MarkdownRenderer from './MarkdownRenderer'
+export {MetaDatas, BlogCard, MarkdownRenderer}
 
 export {
     InfiniteLoopingScrollView,
