@@ -22,12 +22,18 @@
             padding: 10px 0 0 0;
             margin: 0px 0 20px 0;
 
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: center;
+            flex-wrap: wrap;
+
             span {
-                font-size: 14px;
+                font-size: 12px;
                 font-family: 'Fira Code', 'Source Serif Pro', monospace;
 
                 padding: 4px 10px;
-                margin-right: 10px;
+                margin: 0px 10px 6px 0px;
 
                 border-radius: 90px;
 
@@ -39,6 +45,8 @@
         .blogArtwork {
             max-width: 720px;
             margin-bottom: 10px;
+
+            border-radius: 6px;
         }
     }
 }
