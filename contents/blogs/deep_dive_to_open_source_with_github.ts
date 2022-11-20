@@ -1,6 +1,7 @@
-const Blog = `
+const BlogHeader = `
 # Deep Dive Into Open Source With GitHub
-
+`
+const Blog = `
 **TL;DR**
 
 If you are reading this blog that means you might have heard about GitHub recently or maybe not. But have you ever wondered what GitHub is and how to use it for your benefit and build communities? What is even open-source and the idea behind open-source? And many other questions. Then you are a few words away from those answers.
@@ -160,3 +161,4 @@ GitHub: [github.com/sobhanbera](https://github.com/sobhanbera)
 `.toString()
 
 export default Blog
+export {BlogHeader}

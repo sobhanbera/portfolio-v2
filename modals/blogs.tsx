@@ -15,6 +15,7 @@
 export interface Blog {
     id: string
     title: string
+    bodyHeader: string
     body: string
     readTime: number
     shortDescription: string

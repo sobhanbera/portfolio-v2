@@ -1,11 +1,14 @@
 import {Blog} from '../../modals/blogs'
 
-import OpenSourceBlogContent from './deep_dive_to_open_source_with_github'
+import OpenSourceBlogContent, {
+    BlogHeader as OpenSourceBlogHeader,
+} from './deep_dive_to_open_source_with_github'
 
 export const BlogsList: Blog[] = [
     {
         id: '1',
         title: 'Deep Dive To Open Source With GitHub',
+        bodyHeader: OpenSourceBlogHeader,
         body: OpenSourceBlogContent,
         readTime: 7,
         shortDescription:

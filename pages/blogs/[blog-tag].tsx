@@ -16,6 +16,7 @@ import {BlogsList} from '../../contents/blogs'
 import {ThemeBackgroundColors, useThemeSystem} from '../../contexts/ThemeSystem'
 import {LightCodeTheme, DarkCodeTheme} from '../../contents/themes'
 import dayjs from 'dayjs'
+import {MarkdownRenderer} from '../../components'
 
 const BareBlogData: Blog = {
     id: '',
@@ -78,10 +79,9 @@ export default function ActualBlogPage({}: Props): ReactElement {
             </Head>
 
             <div className={styles.blogContainer}>
-                <img
-                    className={styles.blogArtwork}
-                    src={blogData.artwork}
-                    alt="Blog cover image"
+                <MarkdownRenderer
+                    body={blogData.bodyHeader}
+                    includeBottomSpacing={false}
                 />
 
                 <p className={styles.blogTimestamp}>
@@ -96,59 +96,13 @@ export default function ActualBlogPage({}: Props): ReactElement {
                     })}
                 </p>
 
-                <ReactMarkdown
-                    components={{
-                        pre({children}) {
-                            return <>{children}</>
-                        },
-                        code({node, inline, className, children, ...props}) {
-                            const match = /language-(\w+)/.exec(className || '')
+                <img
+                    className={styles.blogArtwork}
+                    src={blogData.artwork}
+                    alt="Blog cover image"
+                />
 
-                            return !inline && match ? (
-                                <SyntaxHighlighter
-                                    style={
-                                        theme.includes('light')
-                                            ? LightCodeTheme
-                                            : DarkCodeTheme
-                                    }
-                                    language={match[1]}
-                                    PreTag="p"
-                                    {...props}>
-                                    {String(children).replace(/\n$/, '')}{' '}
-                                </SyntaxHighlighter>
-                            ) : (
-                                <code className={className} {...props}>
-                                    {children}
-                                </code>
-                            )
-                        },
-
-                        p({children}) {
-                            return <p>{children}</p>
-                        },
-
-                        strong({children}) {
-                            return <strong>{children}</strong>
-                        },
-
-                        a({href, children}) {
-                            return (
-                                <Link href={String(href)}>
-                                    <a target="_blank">{children}</a>
-                                </Link>
-                            )
-                        },
-
-                        table({children}) {
-                            return <table>{children}</table>
-                        },
-                    }}
-                    remarkPlugins={[remarkGfm]}
-                    className={`${markdownStyle.markdown} ${
-                        !theme ? markdownStyle.dark : markdownStyle.light
-                    }`}>
-                    {blogData.body}
-                </ReactMarkdown>
+                <MarkdownRenderer body={blogData.body} includeBottomSpacing />
             </div>
         </div>
     )

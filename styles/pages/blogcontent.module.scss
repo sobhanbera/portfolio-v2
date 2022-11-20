@@ -3,6 +3,8 @@
     padding: 24px 20px;
     font-family: 'Source Serif Pro', Georgia, 'Times New Roman', Times, serif;
 
+    margin-bottom: 150px;
+
     .blogContainer {
         font-family: 'Source Serif Pro', Georgia, 'Times New Roman', Times,
             serif;
@@ -10,13 +12,7 @@
         margin: auto;
         white-space: pre-line;
 
-        .blogArtwork {
-            max-width: 720px;
-        }
-
         .blogTimestamp {
-            padding: 10px 0 0 0;
-
             span {
                 padding: 0 3px;
             }
@@ -24,7 +20,7 @@
 
         .blogTags {
             padding: 10px 0 0 0;
-            margin: 5px 0;
+            margin: 0px 0 20px 0;
 
             span {
                 font-size: 14px;
@@ -38,6 +34,11 @@
                 background-color: var(--primary);
                 color: var(--background);
             }
+        }
+
+        .blogArtwork {
+            max-width: 720px;
+            margin-bottom: 10px;
         }
     }
 }
