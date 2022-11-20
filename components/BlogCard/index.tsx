@@ -58,7 +58,10 @@ export default function BlogCard({blogData}: BlogCardProps) {
 
                         <div className={styles.visitButtons}>
                             <button className={styles.visitButton}>
-                                <a target={'_blank'} href={blogData.mediumLink}>
+                                <a
+                                    target={'_blank'}
+                                    href={blogData.mediumLink}
+                                    rel="noreferrer">
                                     <svg
                                         width="24"
                                         height="24"
@@ -77,7 +80,10 @@ export default function BlogCard({blogData}: BlogCardProps) {
                             </button>
 
                             <button className={styles.visitButton}>
-                                <a target={'_blank'} href={blogData.mediumLink}>
+                                <a
+                                    target={'_blank'}
+                                    href={blogData.mediumLink}
+                                    rel="noreferrer">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         viewBox="0 0 30 30">
