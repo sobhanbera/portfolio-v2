@@ -1,0 +1,546 @@
+// .markdown * {
+//     font-family: 'Source Serif Pro';
+
+//     user-select: none;
+// }
+
+// .markdown * li {
+//     margin-top: 0;
+//     margin-bottom: 0;
+//     list-style: circle;
+//     list-style-type: disc;
+// }
+// .markdown {
+//     font-size: 17px;
+//     color: var(--silver);
+//     line-height: 1.5;
+//     word-wrap: break-word;
+//     padding: 10px;
+
+//     -webkit-border-radius: 0 0 3px 3px;
+//     border-radius: 0 0 3px 3px;
+// }
+// .markdown > *:first-child {
+//     margin-top: 0 !important;
+// }
+// .markdown > *:last-child {
+//     margin-bottom: 0 !important;
+// }
+// .markdown .table-of-contents ol {
+//     list-style: none;
+// }
+// .markdown .table-of-contents > ol {
+//     padding-left: 0;
+// }
+// .markdown * {
+//     -webkit-box-sizing: border-box;
+//     -moz-box-sizing: border-box;
+//     box-sizing: border-box;
+// }
+// .markdown h1,
+// .markdown h2,
+// .markdown h3,
+// .markdown h4,
+// .markdown h5,
+// .markdown h6 {
+//     margin-top: 1em;
+//     margin-bottom: 16px;
+//     font-weight: bold;
+//     line-height: 1.4;
+//     font-family: Calibre, Inter, Karla, Roboto, Ubuntu, JetBrains, sans-serif;
+// }
+// .markdown h1 .anchor,
+// .markdown h2 .anchor,
+// .markdown h3 .anchor,
+// .markdown h4 .anchor,
+// .markdown h5 .anchor,
+// .markdown h6 .anchor {
+//     margin-left: -24px;
+//     visibility: hidden;
+// }
+// .markdown h1:hover .anchor,
+// .markdown h2:hover .anchor,
+// .markdown h3:hover .anchor,
+// .markdown h4:hover .anchor,
+// .markdown h5:hover .anchor,
+// .markdown h6:hover .anchor {
+//     visibility: visible;
+// }
+// .markdown p,
+// .markdown blockquote,
+// .markdown ul,
+// .markdown ol,
+// .markdown dl,
+// .markdown table,
+// .markdown pre {
+//     margin-top: 0;
+//     margin-bottom: 16px;
+// }
+// .markdown p {
+//     margin-bottom: 8px; // custom, otherwise it is giving a padding of 16px which is too big
+//     font-size: 20px;
+// }
+// .markdown ul,
+// .markdown ul {
+//     margin-bottom: -15px; // custom, otherwise it is giving a padding of 16px which is too big
+//     margin-top: -15px;
+// }
+// .markdown h1 {
+//     margin: 0.67em 0;
+//     padding-bottom: 0.3em;
+//     font-size: 2.25em;
+//     line-height: 1.2;
+//     border-bottom: 1px solid rgba(var(--silver-rgb), 0.35);
+// }
+// .markdown h2 {
+//     padding-bottom: 0.2em;
+//     font-size: 1.75em;
+//     line-height: 1.225;
+//     border-bottom: 1px solid rgba(var(--silver-rgb), 0.35);
+// }
+// .markdown h3 {
+//     font-size: 1.5em;
+//     line-height: 1.43;
+// }
+// .markdown h4 {
+//     font-size: 1.25em;
+// }
+// .markdown h5 {
+//     font-size: 1em;
+// }
+// .markdown h6 {
+//     font-size: 1em;
+//     color: var(--silver-dim);
+// }
+// .markdown hr {
+//     margin-top: 20px;
+//     margin-bottom: 20px;
+//     height: 0;
+//     border: 0;
+//     border-top: 1px solid rgba(var(--silver-rgb), 0.35);
+// }
+// .markdown ol,
+// .markdown ul {
+//     padding-left: 2em;
+// }
+// .markdown ol ol,
+// .markdown ul ol {
+//     list-style-type: lower-roman;
+// }
+// .markdown ol ul,
+// .markdown ul ul {
+//     list-style-type: circle;
+// }
+// .markdown ol ul ul,
+// .markdown ul ul ul {
+//     list-style-type: square;
+// }
+// .markdown ol {
+//     list-style-type: decimal;
+// }
+// .markdown ul {
+//     list-style-type: disc;
+// }
+// .markdown dl {
+//     margin-bottom: 1.3em;
+// }
+// .markdown dl dt {
+//     font-weight: 700;
+// }
+// .markdown dl dd {
+//     margin-left: 0;
+// }
+// .markdown dl dd p {
+//     margin-bottom: 0.8em;
+// }
+// .markdown blockquote {
+//     margin-left: 0;
+//     margin-right: 0;
+//     // padding: 0 15px;
+//     color: var(--silver-dim);
+
+//     margin-top: -30px; // since its not rendering in correct width and height
+//     margin-bottom: -30px; // since its not rendering in correct width and height
+
+//     p {
+//         line-height: 32px;
+//         padding: 5px 5px 5px 15px;
+//         // background-color: rebeccapurple;
+//         border-left: 4px solid var(--primary);
+//         font-style: italic;
+//     }
+// }
+// .markdown table {
+//     display: block;
+//     width: 100%;
+//     overflow: auto;
+//     word-break: normal;
+//     word-break: keep-all;
+//     border-collapse: collapse;
+//     border-spacing: 0;
+//     * {
+//         font-size: 14px;
+//     }
+// }
+// .markdown table tr {
+//     background-color: var(--background);
+//     border-top: 1px solid var(--background-light);
+//     font-family: Calibre, Inter, Karla, Roboto, Ubuntu, JetBrains, sans-serif;
+// }
+// .markdown table thead tr {
+//     font-weight: bold;
+//     background-color: var(--background-light);
+//     font-family: Calibre, Inter, Karla, Roboto, Ubuntu, JetBrains, sans-serif;
+// }
+// .markdown table tr:nth-child(2n) {
+//     background-color: var(--background-light);
+//     font-family: Calibre, Inter, Karla, Roboto, Ubuntu, JetBrains, sans-serif;
+// }
+// .markdown table thead tr th {
+//     font-weight: bold;
+//     background-color: var(--background-light);
+//     font-family: Calibre, Inter, Karla, Roboto, Ubuntu, JetBrains, sans-serif;
+// }
+// .markdown table th,
+// .markdown table td {
+//     padding: 6px 13px;
+//     border: 1px solid var(--color-markdown-table-border);
+//     font-family: Calibre, Inter, Karla, Roboto, Ubuntu, JetBrains, sans-serif;
+// }
+// .markdown kbd {
+//     display: inline-block;
+//     padding: 5px 6px;
+//     font: 14px SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+//     line-height: 10px;
+//     color: var(--color-kbd-foreground);
+//     vertical-align: middle;
+//     background-color: var(--color-bg-secondary);
+//     border: 1px solid var(--color-border-tertiary);
+//     border-radius: 3px;
+//     box-shadow: inset 0 -1px 0 var(--color-border-tertiary);
+// }
+// .markdown pre {
+//     word-wrap: normal;
+//     // padding: 16px;
+//     overflow: auto;
+//     font-size: 85%;
+//     line-height: 1.45;
+//     background-color: var(--color-bg-tertiary);
+//     -webkit-border-radius: 3px;
+//     border-radius: 3px;
+// }
+// .markdown pre code {
+//     display: inline;
+//     max-width: initial;
+//     padding: 0;
+//     margin: 0;
+//     overflow: initial;
+//     font-size: 100%;
+//     line-height: inherit;
+//     word-wrap: normal;
+//     white-space: pre;
+//     border: 0;
+//     -webkit-border-radius: 3px;
+//     border-radius: 3px;
+//     background-color: transparent;
+//     font-family: 'Fira Code';
+// }
+// .markdown code {
+//     font-family: 'Fira Code', monospace;
+//     padding: 0;
+//     padding-top: 0.2em;
+//     padding-bottom: 0.2em;
+//     margin: 0;
+//     font-size: 85%;
+//     background-color: var(--color-markdown-code-bg);
+//     -webkit-border-radius: 3px;
+//     border-radius: 3px;
+// }
+// .markdown * a,
+// .markdown a,
+// .markdown p a {
+//     color: var(--color-text-link);
+//     text-decoration: none;
+//     background: transparent;
+
+//     &:hover {
+//         color: var(--primary);
+//     }
+// }
+// .markdown img {
+//     max-width: 100%;
+//     max-height: 100%;
+// }
+// .markdown strong {
+//     font-weight: bold;
+//     font-size: 22px;
+//     font-family: Calibre, Inter, Karla, Roboto, Ubuntu, JetBrains, sans-serif;
+// }
+// .markdown * li strong {
+//     font-size: 20px;
+// }
+// .markdown em {
+//     font-style: italic;
+// }
+// .markdown del {
+//     text-decoration: line-through;
+// }
+// .task-list-item {
+//     list-style-type: none;
+// }
+// .task-list-item input {
+//     font: 13px/1.4 Helvetica, arial, nimbussansl, liberationsans, freesans,
+//         clean, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+//         'Segoe UI Symbol';
+//     margin: 0 0.35em 0.25em -1.6em;
+//     vertical-align: middle;
+// }
+// .task-list-item input[disabled] {
+//     cursor: default;
+// }
+// .task-list-item input[type='checkbox'] {
+//     -webkit-box-sizing: border-box;
+//     -moz-box-sizing: border-box;
+//     box-sizing: border-box;
+//     padding: 0;
+// }
+// .task-list-item input[type='radio'] {
+//     -webkit-box-sizing: border-box;
+//     -moz-box-sizing: border-box;
+//     box-sizing: border-box;
+//     padding: 0;
+// }
+
+.markdown {
+    color: var(--silver);
+    line-height: 1.5;
+    word-wrap: break-word;
+
+    user-select: none;
+
+    font-size: 17px;
+
+    margin-bottom: 150px;
+
+    * {
+        font-family: 'Source Serif Pro';
+        font-size: 20px;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-top: 1em;
+        margin-bottom: 16px;
+        font-weight: bold;
+        line-height: 1.4;
+        font-family: Calibre, Inter, Karla, Roboto, Ubuntu, JetBrains,
+            sans-serif;
+    }
+    h1 {
+        margin: 0.67em 0;
+        padding-bottom: 0.3em;
+
+        font-size: 2.25em;
+        line-height: 1.2;
+
+        border-bottom: 1px solid rgba(var(--silver-rgb), 0.35);
+    }
+    h2 {
+        padding-bottom: 0.2em;
+
+        font-size: 1.75em;
+        line-height: 1.225;
+
+        border-bottom: 1px solid rgba(var(--silver-rgb), 0.35);
+    }
+    h3 {
+        font-size: 1.5em;
+        line-height: 1.43;
+    }
+    h4 {
+        font-size: 1.25em;
+    }
+    h5 {
+        font-size: 1em;
+    }
+    h6 {
+        font-size: 1em;
+        color: var(--silver-dim);
+    }
+
+    p {
+        font-size: 20px;
+        font-family: 'Source Serif Pro';
+
+        strong {
+            font-weight: bold;
+            font-size: 22px;
+            font-family: Calibre, Inter, Karla, Roboto, Ubuntu, JetBrains,
+                sans-serif;
+        }
+
+        a {
+            strong {
+                &:hover {
+                    color: var(--primary);
+                }
+            }
+
+            &:hover {
+                color: var(--primary);
+            }
+        }
+    }
+
+    * strong {
+        font-weight: bold;
+    }
+
+    * a {
+        text-decoration: underline;
+
+        strong {
+            &:hover {
+                color: var(--primary);
+            }
+        }
+
+        &:hover {
+            color: var(--primary);
+        }
+    }
+
+    blockquote {
+        margin-top: -30px; // since its not rendering in correct width and height
+        margin-bottom: -30px; // since its not rendering in correct width and height
+
+        p {
+            padding: 5px 5px 5px 15px;
+
+            line-height: 32px;
+            border-left: 4px solid var(--primary);
+
+            font-style: italic;
+        }
+    }
+
+    blockquote + p {
+        margin-bottom: -25px;
+    }
+
+    ol,
+    ol li {
+        list-style-type: decimal;
+        padding: 0;
+
+        strong {
+            font-weight: bold;
+            font-size: 20px;
+            font-family: Calibre, Inter, Karla, Roboto, Ubuntu, JetBrains,
+                sans-serif;
+        }
+    }
+
+    ul,
+    ul li {
+        list-style-type: disc;
+    }
+
+    ul,
+    ol,
+    ul li,
+    ol li {
+        margin: 0 0 0 12px;
+    }
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    code,
+    code pre,
+    pre,
+    pre code,
+    code span,
+    pre code span {
+        font-family: 'Fira Code', monospace;
+        font-size: 18px;
+    }
+
+    table {
+        display: block;
+
+        width: 100%;
+        overflow: auto;
+
+        word-break: normal;
+        word-break: keep-all;
+
+        border-collapse: collapse;
+        border-spacing: 0;
+
+        border-radius: 10px;
+
+        * {
+            font-size: 16px;
+            font-family: Calibre;
+        }
+
+        thead {
+            tr {
+                background-color: var(--background);
+                border-top: 1px solid var(--background-light);
+                font-family: Calibre, Inter, Karla, Roboto, Ubuntu, JetBrains,
+                    sans-serif;
+
+                font-weight: bold;
+                background-color: var(--background-light);
+                font-family: Calibre, Inter, Karla, Roboto, Ubuntu, JetBrains,
+                    sans-serif;
+
+                &:nth-child(2n) {
+                    background-color: var(--background-light);
+                    font-family: Calibre, Inter, Karla, Roboto, Ubuntu,
+                        JetBrains, sans-serif;
+                }
+
+                th {
+                    line-height: 1;
+                    padding: 10px 13px;
+                    font-weight: bold;
+
+                    font-family: Calibre, Inter, Karla, Roboto, Ubuntu,
+                        JetBrains, sans-serif;
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                background-color: var(--background);
+                border-top: 1px solid var(--background-light);
+                font-family: Calibre, Inter, Karla, Roboto, Ubuntu, JetBrains,
+                    sans-serif;
+
+                &:nth-child(2n) {
+                    background-color: var(--background-light);
+                    font-family: Calibre, Inter, Karla, Roboto, Ubuntu,
+                        JetBrains, sans-serif;
+                }
+
+                td {
+                    line-height: 1;
+                    padding: 10px 13px;
+
+                    font-family: Calibre, Inter, Karla, Roboto, Ubuntu,
+                        JetBrains, sans-serif;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+.blogPage {
+    padding: 24px 20px;
+    font-family: 'Source Serif Pro', Georgia, 'Times New Roman', Times, serif;
+
+    .blogContainer {
+        font-family: 'Source Serif Pro', Georgia, 'Times New Roman', Times,
+            serif;
+        max-width: 720px;
+        margin: auto;
+        white-space: pre-line;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .blogPage {
+        padding: 20px 0px;
+
+        .blogContainer {
+            width: 100%;
+            max-width: 90vw;
+        }
+    }
+}
