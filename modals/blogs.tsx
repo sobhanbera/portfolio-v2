@@ -16,6 +16,7 @@ export interface Blog {
     id: string
     title: string
     body: string
+    readTime: number
     shortDescription: string
     timestamp: Date | number
     artwork: string

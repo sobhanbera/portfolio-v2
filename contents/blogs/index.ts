@@ -7,6 +7,7 @@ export const BlogsList: Blog[] = [
         id: '1',
         title: 'Deep Dive To Open Source With GitHub',
         body: OpenSourceBlogContent,
+        readTime: 7,
         shortDescription:
             'Open-source software could change the whole workflow of a team or organization.',
         timestamp: 1643029520306,

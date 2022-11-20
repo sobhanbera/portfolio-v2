@@ -1,6 +1,7 @@
 import React, {ReactElement, useEffect, useState} from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
+import Image from 'next/image'
 import {useRouter} from 'next/router'
 
 import remarkGfm from 'remark-gfm'
@@ -14,12 +15,14 @@ import {Blog} from '../../modals/blogs'
 import {BlogsList} from '../../contents/blogs'
 import {ThemeBackgroundColors, useThemeSystem} from '../../contexts/ThemeSystem'
 import {LightCodeTheme, DarkCodeTheme} from '../../contents/themes'
+import dayjs from 'dayjs'
 
 const BareBlogData: Blog = {
     id: '',
     title: '',
     body: '',
     shortDescription: '',
+    readTime: 0,
     timestamp: 0,
     artwork: '',
     pageTitle: '',
@@ -39,6 +42,8 @@ export default function ActualBlogPage({}: Props): ReactElement {
     const [pageTitle, setPageTitle] = useState('Blogs | Sobhan Bera')
     // the blog data
     const [blogData, setBlogData] = useState<Blog>(BareBlogData)
+
+    const parsedDate = dayjs(blogData.timestamp).format('MMM DD, YYYY')
 
     // loadBlog function load the blog from the local data
     // first of all the path of the website should contain a query parameter
@@ -73,6 +78,24 @@ export default function ActualBlogPage({}: Props): ReactElement {
             </Head>
 
             <div className={styles.blogContainer}>
+                <img
+                    className={styles.blogArtwork}
+                    src={blogData.artwork}
+                    alt="Blog cover image"
+                />
+
+                <p className={styles.blogTimestamp}>
+                    <span>{parsedDate}</span>
+                    <span> • </span>
+                    <span>{`${blogData.readTime} min read`}</span>
+                </p>
+
+                <p className={styles.blogTags}>
+                    {blogData.tags.map(tag => {
+                        return <span key={tag}>{tag}</span>
+                    })}
+                </p>
+
                 <ReactMarkdown
                     components={{
                         pre({children}) {

@@ -1,4 +1,5 @@
 .blogPage {
+    user-select: none;
     padding: 24px 20px;
     font-family: 'Source Serif Pro', Georgia, 'Times New Roman', Times, serif;
 
@@ -8,6 +9,36 @@
         max-width: 720px;
         margin: auto;
         white-space: pre-line;
+
+        .blogArtwork {
+            max-width: 720px;
+        }
+
+        .blogTimestamp {
+            padding: 10px 0 0 0;
+
+            span {
+                padding: 0 3px;
+            }
+        }
+
+        .blogTags {
+            padding: 10px 0 0 0;
+            margin: 5px 0;
+
+            span {
+                font-size: 14px;
+                font-family: 'Fira Code', 'Source Serif Pro', monospace;
+
+                padding: 4px 10px;
+                margin-right: 10px;
+
+                border-radius: 90px;
+
+                background-color: var(--primary);
+                color: var(--background);
+            }
+        }
     }
 }
 
@@ -18,6 +49,11 @@
         .blogContainer {
             width: 100%;
             max-width: 90vw;
+        }
+
+        .blogArtwork {
+            width: 100%;
+            max-width: 80vw;
         }
     }
 }
