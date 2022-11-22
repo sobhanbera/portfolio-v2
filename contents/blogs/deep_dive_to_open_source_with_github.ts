@@ -145,7 +145,8 @@ There are many open-source projects which are hosted publicly on different platf
 | Redux                 | TS, JS             | 14911 | 56851  | 45            | [reduxjs/redux](https://github.com/reduxjs/redux)                  |
 | Oh My Zsh             | Shell              | 22901 | 134666 | 630           | [ohmyzsh/ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)              |
 
-All the above projects are hosted in GitHub. There are many other projects based on every topic every language and every technology.
+All the above projects are hosted in GitHub. There are many other projects based on every topic every language and every technology. 
+*NOTE:* The data of the above repositories might have been updated depending on when you are reading this blog.
 
 Now let’s Get Started with it!
 
