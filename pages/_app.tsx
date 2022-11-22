@@ -1,6 +1,7 @@
 import {useEffect} from 'react'
 import Head from 'next/head'
 import type {AppProps} from 'next/app'
+import {useRouter} from 'next/router'
 
 import aos from 'aos'
 
@@ -18,6 +19,8 @@ import {
 import ThemeSystem from '../contexts/ThemeSystem'
 
 function MyApp({Component, pageProps}: AppProps) {
+    const {asPath} = useRouter()
+
     useEffect(() => {
         aos.init({
             duration: 1828.3268, // birthday digits (everybody?) :)...
@@ -44,7 +47,8 @@ function MyApp({Component, pageProps}: AppProps) {
                 </Head>
 
                 {/* greeting to be in the page */}
-                <Greeting />
+                {/* but this will only show up when it is the home page*/}
+                {asPath === '/' ? <Greeting /> : null}
 
                 {/* <InfiniteLoopingScrollView verticalBackups={4}> */}
                 <main className={styles.root}>
