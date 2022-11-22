@@ -46,25 +46,66 @@
             }
         }
 
-        .description {
+        .aboutDescriptors {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
+            flex-direction: row;
+            justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
 
-            .aboutMeText {
-                font-size: 22px;
-                font-weight: 400;
+            .description {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
 
-                font-family: Calibre;
+                max-width: 60%;
 
-                color: rgba(var(--silver-rgb), 0.85);
+                .aboutMeText {
+                    font-size: 20px;
+                    font-weight: 400;
 
-                margin: 15px 3px;
-                max-width: 600px;
-                width: 100%;
+                    font-family: Calibre;
 
-                white-space: pre-wrap;
+                    color: rgba(var(--silver-rgb), 0.85);
+
+                    margin: 15px 3px;
+                    max-width: 600px;
+                    width: 100%;
+
+                    white-space: pre-wrap;
+                }
+            }
+
+            .developerArtwork {
+                border-radius: 6px;
+                overflow: hidden;
+                border: none;
+
+                max-width: 300px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    padding: 5px;
+
+                    border-radius: 6px;
+                    overflow: hidden;
+
+                    border: 1px solid rgba(var(--silver-rgb), 0.33);
+                    filter: grayscale(100%);
+
+                    &:hover {
+                        filter: grayscale(0%);
+                        border: 5px solid rgba(var(--primary-rgb), 0.85);
+                        padding: 0px;
+                        transform: scale(0.954);
+                    }
+
+                    &:active {
+                        transform: scale(0.9);
+                    }
+                }
             }
         }
     }
@@ -98,6 +139,14 @@
             .line {
                 width: 130px;
             }
+
+            .aboutDescriptors {
+                justify-content: center;
+
+				.description {
+					max-width: 100%;
+				}
+            }
         }
     }
 }
@@ -117,9 +166,19 @@
                 }
             }
 
-            .description {
-                .aboutMeText {
-                    font-size: 20px;
+            .aboutDescriptors {
+                .description {
+                    width: 100%;
+
+                    .aboutMeText {
+                        font-size: 20px;
+                    }
+                }
+
+                .developerArtwork {
+                    img {
+                        max-width: 250px;
+                    }
                 }
             }
         }
@@ -141,9 +200,11 @@
                 }
             }
 
-            .description {
-                .aboutMeText {
-                    font-size: 18px;
+            .aboutDescriptors {
+                .description {
+                    .aboutMeText {
+                        font-size: 18px;
+                    }
                 }
             }
         }
@@ -162,9 +223,11 @@
                 }
             }
 
-            .description {
-                .aboutMeText {
-                    font-size: 18px;
+            .aboutDescriptors {
+                .description {
+                    .aboutMeText {
+                        font-size: 18px;
+                    }
                 }
             }
         }
