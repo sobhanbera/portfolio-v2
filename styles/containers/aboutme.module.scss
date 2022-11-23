@@ -84,6 +84,8 @@
 
                 max-width: 300px;
 
+                cursor: crosshair;
+
                 img {
                     width: 100%;
                     height: 100%;
@@ -143,9 +145,9 @@
             .aboutDescriptors {
                 justify-content: center;
 
-				.description {
-					max-width: 100%;
-				}
+                .description {
+                    max-width: 100%;
+                }
             }
         }
     }

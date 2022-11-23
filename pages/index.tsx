@@ -35,9 +35,9 @@ export default function Home() {
 
             <AboutMe />
 
-            <MyBlogs limit={3} showMoreBlogs={true} />
-
             <SkillsSection />
+
+            <MyBlogs limit={3} showMoreBlogs={true} />
 
             {/* <Projects /> */}
 
