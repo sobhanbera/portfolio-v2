@@ -23,6 +23,13 @@ import BlogCard from './BlogCard'
 import MarkdownRenderer from './MarkdownRenderer'
 export {MetaDatas, BlogCard, MarkdownRenderer}
 
+import {
+    DevelopmentSkillsTree,
+    LanguageSkillsTree,
+    ToolSkillsTree,
+} from './SkillTree'
+export {DevelopmentSkillsTree, LanguageSkillsTree, ToolSkillsTree}
+
 export {
     InfiniteLoopingScrollView,
     Header,
