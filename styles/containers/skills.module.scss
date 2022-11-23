@@ -16,9 +16,10 @@
 
         margin: auto;
 
-        max-width: 1000px;
-        width: 1200px;
+        // max-width: 1000px;
+        // width: 1200px;
         min-height: 80vh;
+        width: 100%;
 
         .skillsHeader {
             width: 100%;
@@ -45,13 +46,146 @@
                 border-top: 1px solid rgba(var(--silver-rgb), 0.33);
             }
         }
+
+        .skillsContent {
+            .skillsTree {
+                * {
+                    font-family: 'Karla', sans-serif;
+                    font-size: 15px;
+                    transition: all 0.5s ease;
+
+                    &::-webkit-scrollbar {
+                        width: 0;
+                        height: 0; // to remove the horizontal scroll bar
+                    }
+
+                    &::before {
+                        transition: all 0.5s ease;
+                    }
+                }
+
+                position: relative;
+                list-style: none;
+                text-align: center;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+
+                margin: -50px 0 0 0;
+                padding: 0;
+
+                overflow-x: auto;
+                overflow-y: hidden;
+
+                max-width: 100%;
+
+                ul,
+                li {
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                    position: relative;
+                }
+
+                ul {
+                    display: table;
+                    width: 100%;
+                }
+
+                li {
+                    display: table-cell;
+                    padding: 1.75em 1px;
+                    vertical-align: top;
+
+                    &::before {
+                        content: '';
+
+                        outline: solid 1px var(--background-light);
+
+                        position: absolute;
+                        left: 0px;
+                        right: 0px;
+                        top: 0.75em;
+                    }
+
+                    &:first-child:before {
+                        left: 50%;
+                    }
+
+                    &:last-child:before {
+                        right: 50%;
+                    }
+                }
+
+                span {
+                    border: 0.1em solid var(--background-light);
+                    border-radius: 0.2em;
+
+                    display: inline-block;
+                    position: relative;
+
+                    min-width: 60px;
+                    margin: 0.2em 0.5em;
+                    padding: 0.3em 0.9em;
+
+                    cursor: crosshair;
+
+                    &:hover {
+                        border: 0.1em solid var(--primary);
+                        transform: scale(1.05);
+                        color: var(--primary);
+
+                        // change border color of all the children node
+                        & + ul li span {
+                            border: 0.1em solid var(--primary);
+                            transform: scale(1.05);
+                            color: var(--primary);
+                        }
+                        // also change the style for the children edges
+                        // somewhat upto nested levels
+                        & + ul::before,
+                        & + ul li::before,
+                        & + ul li span::before,
+                        & + ul li span + ul::before,
+                        & + ul li span + ul li::before,
+                        & + ul li span + ul li span::before {
+                            outline: solid 1px var(--primary);
+                        }
+                    }
+                }
+
+                ul::before,
+                span::before {
+                    content: '';
+
+                    outline: solid 1px var(--background-light);
+                    height: 1em;
+                    left: 50%;
+                    position: absolute;
+                }
+
+                ul::before {
+                    top: -0.25em;
+                }
+
+                span::before {
+                    top: -1.18em;
+                }
+
+                li span.skillsTreeRoot::before {
+                    display: none;
+                }
+            }
+        }
     }
 }
 
 @media screen and (max-width: 1200px) {
     .skillsContainer {
         .skillsWrapper {
-            width: 900px;
+            // width: 900px;
             .skillsHeader {
                 .skillsHeading {
                     font-size: 30px;
@@ -65,16 +199,59 @@
     }
 }
 
+@media screen and (max-width: 1175px) {
+    .skillsContainer {
+        .skillsWrapper {
+            .skillsContent {
+                .skillsTree {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 1000px) {
     .skillsContainer {
         .skillsWrapper {
-            width: 600px;
+            // width: 600px;
             .skillsHeading {
                 font-size: 28px;
             }
 
             .line {
                 width: 130px;
+            }
+
+            .skillsContent {
+                .skillsTree {
+                    align-items: flex-start;
+                    max-width: 900px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .skillsContainer {
+        .skillsWrapper {
+            .skillsContent {
+                .skillsTree {
+                    max-width: 800px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .skillsContainer {
+        .skillsWrapper {
+            .skillsContent {
+                .skillsTree {
+                    max-width: 725px;
+                }
             }
         }
     }
@@ -83,8 +260,8 @@
 @media screen and (max-width: 750px) {
     .skillsContainer {
         .skillsWrapper {
-            width: 90%;
-            padding: 0 30px;
+            // width: 90%;
+            // padding: 0 30px;
             .skillsHeader {
                 .skillsHeading {
                     font-size: 26px;
@@ -92,6 +269,12 @@
 
                 .line {
                     width: 110px;
+                }
+            }
+
+            .skillsContent {
+                .skillsTree {
+                    max-width: 600px;
                 }
             }
         }
@@ -112,6 +295,12 @@
                     width: 80px;
                 }
             }
+
+            .skillsContent {
+                .skillsTree {
+                    max-width: 550px;
+                }
+            }
         }
     }
 }
@@ -119,12 +308,54 @@
 @media screen and (max-width: 550px) {
     .skillsContainer {
         .skillsWrapper {
-            width: 100%;
-            padding: 0 50px;
+            // width: 100%;
+            // padding: 0 50px;
 
             .skillsHeader {
                 .skillsHeading {
                     font-size: 24px;
+                }
+            }
+
+            .skillsContent {
+                .skillsTree {
+                    max-width: 450px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .skillsContainer {
+        .skillsWrapper {
+            .skillsContent {
+                .skillsTree {
+                    max-width: 400px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .skillsContainer {
+        .skillsWrapper {
+            .skillsContent {
+                .skillsTree {
+                    max-width: 360px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .skillsContainer {
+        .skillsWrapper {
+            .skillsContent {
+                .skillsTree {
+                    max-width: 360px;
                 }
             }
         }
