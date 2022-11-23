@@ -20,14 +20,27 @@ export default function ToolSkillsTree() {
 
             {/* terminal tools */}
             <TreeBranch title="Terminal">
-                <TreeLeaf title="Iterm2+ZSH" />
-                <TreeLeaf title="Tmux" />
+                <TreeLeaf title="Iterm" />
+                <TreeLeaf title="Zsh+Tmux" />
+            </TreeBranch>
+
+            {/* ui/ux tools */}
+            <TreeBranch title="UI">
+                <TreeLeaf title="Figma" />
+                <TreeLeaf title="Sketch" />
+                <TreeLeaf title="Adobe XD" />
+            </TreeBranch>
+
+            {/* operating systems */}
+            <TreeBranch title="OS">
+                <TreeLeaf title="Linux" />
+                <TreeLeaf title="MacOS" />
             </TreeBranch>
 
             {/* deployment related tools */}
             <TreeBranch title="Deployment">
                 <TreeLeaf title="Vercel" />
-                <TreeLeaf title="GitHub Pages" />
+                <TreeLeaf title="GPages" />
             </TreeBranch>
         </ul>
     )

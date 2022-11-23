@@ -14,7 +14,7 @@ export default function DevelopmentSkillsTree() {
                     <TreeLeaf title="React" />
                 </TreeBranch>
 
-                <TreeBranch title="̆Backend">
+                <TreeBranch title="Backend">
                     <TreeLeaf title="Express" />
                 </TreeBranch>
             </TreeBranch>
@@ -26,25 +26,36 @@ export default function DevelopmentSkillsTree() {
 
             {/* git and github */}
             <TreeBranch title="Version Control">
-                <TreeLeaf title="Git" />
-
-                <TreeLeaf title="GitHub" />
+                <TreeBranch title="Git">
+                    <TreeLeaf title="GitHub" />
+                </TreeBranch>
             </TreeBranch>
 
             {/* databases */}
             <TreeBranch title="Databases">
-                <TreeLeaf title="MySQL" />
+                <TreeBranch title="RDBMS">
+                    <TreeLeaf title="MySQL" />
+                </TreeBranch>
 
                 <TreeLeaf title="Firebase" />
             </TreeBranch>
 
             {/* containers */}
             <TreeBranch title="DevOps">
-                <TreeLeaf title="Docker" />
+                <TreeBranch title="Docker">
+                    <TreeLeaf title="CLI" />
 
-                <TreeLeaf title="Kubernetes" />
+                    <TreeLeaf title="Kubernetes" />
+                </TreeBranch>
 
                 <TreeLeaf title="CI/CD" />
+            </TreeBranch>
+
+            {/* clouds services */}
+            <TreeBranch title="Cloud">
+                <TreeLeaf title="GCP" />
+
+                <TreeLeaf title="AWS" />
             </TreeBranch>
         </ul>
     )
