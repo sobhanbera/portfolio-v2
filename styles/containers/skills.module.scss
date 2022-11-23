@@ -18,7 +18,7 @@
 
         // max-width: 1000px;
         // width: 1200px;
-        min-height: 80vh;
+        min-height: 90vh;
         width: 100%;
 
         .skillsHeader {
@@ -308,9 +308,6 @@
 @media screen and (max-width: 550px) {
     .skillsContainer {
         .skillsWrapper {
-            // width: 100%;
-            // padding: 0 50px;
-
             .skillsHeader {
                 .skillsHeading {
                     font-size: 24px;
@@ -329,6 +326,10 @@
 @media screen and (max-width: 450px) {
     .skillsContainer {
         .skillsWrapper {
+            .skillsHeader {
+                padding-top: 100px;
+            }
+
             .skillsContent {
                 .skillsTree {
                     max-width: 400px;
