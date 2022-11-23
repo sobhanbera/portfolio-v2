@@ -78,15 +78,3 @@
         display: none;
     }
 }
-
-@media screen and (max-width: 1000px) {
-    .floatingFooter {
-        display: block;
-    }
-}
-
-@media screen and (max-width: 750px) {
-    .floatingFooter {
-        display: none;
-    }
-}
