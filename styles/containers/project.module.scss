@@ -50,8 +50,8 @@
             flex-wrap: wrap;
 
             .projectCard {
-                width: 325px;
-                height: 325px;
+                width: 330px;
+                height: 330px;
 
                 margin-bottom: 30px;
                 padding: 5px;
@@ -60,11 +60,6 @@
                 border: 2px solid transparent;
 
                 background-color: var(--background-light);
-
-                &:hover {
-                    transform: translateY(-10px);
-                    border: 2px solid rgba(var(--primary-rgb), 0.85);
-                }
 
                 .projectCardHolder {
                     padding: 15px;
@@ -88,9 +83,9 @@
 
                             .headerIcon {
                                 svg {
-                                    width: 48px;
+                                    width: 50px;
                                     height: 48px;
-                                    color: var(--silver);
+                                    color: var(--primary);
                                 }
                             }
 
@@ -103,8 +98,6 @@
                                 justify-content: flex-end;
                                 align-items: flex-end;
 
-                                // background-color: rebeccapurple;
-
                                 .hrefButtons {
                                     height: 100%;
 
@@ -113,10 +106,12 @@
                                             width: 26px;
                                             height: 26px;
 
-                                            // background-color: darkblue;
-
                                             padding: 2px;
                                             margin: 0 5px;
+
+                                            &:hover {
+                                                color: var(--primary);
+                                            }
                                         }
 
                                         &.playstoreSvg {
@@ -153,7 +148,6 @@
                         flex-wrap: wrap;
 
                         margin-top: 10px;
-                        // padding-left: -10px;
 
                         span {
                             color: var(--silver-dim);
@@ -161,8 +155,30 @@
                         }
                     }
                 }
+
+                &:hover {
+                    transform: translateY(-10px);
+                    border: 2px solid rgba(var(--primary-rgb), 0.85);
+
+                    .projectCardHolder {
+                        .projectInitials {
+                            .projectTitleText {
+                                color: var(--primary);
+                            }
+                        }
+                    }
+                }
             }
         }
+    }
+}
+
+@keyframes update_svg_color {
+    0% {
+        color: var(--silver);
+    }
+    100% {
+        color: var(--primary);
     }
 }
 
@@ -195,6 +211,13 @@
             .workText {
                 font-size: 56px;
                 max-width: 650px;
+            }
+
+            .projectListContainer {
+                .projectCard {
+                    width: 100%;
+                    height: max-content;
+                }
             }
         }
     }
@@ -256,13 +279,6 @@
             .currentStatusText {
                 font-size: 16px;
             }
-        }
-    }
-}
-
-@media screen and (max-width: 400px) {
-    .projectContainer {
-        .projectWrapper {
         }
     }
 }
