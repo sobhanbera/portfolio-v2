@@ -18,7 +18,11 @@ export default function Footer() {
         <div className={styles.footer}>
             <div className={styles.footerContainer}>
                 <div className={styles.copyrightTextContainer}>
-                    <p>{COPYRIGHT_TEXT}</p>
+                    <Link href="/">
+                        <a>
+                            <p>{COPYRIGHT_TEXT}</p>
+                        </a>
+                    </Link>
                 </div>
 
                 <div className={styles.socialLinksContainer}>

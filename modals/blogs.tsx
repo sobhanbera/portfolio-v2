@@ -15,33 +15,44 @@
 export interface Blog {
     id: string
     title: string
-    body?: string
+    bodyHeader: string
+    body: string
+    readTime: number
     shortDescription: string
     timestamp: Date | number
     artwork: string
     pageTitle: string
-    isBlog: boolean
     link: string
     mediumLink: string
     property: string
     tags: string[]
 }
 
-export const BlogsList: Blog[] = [
-    {
-        id: '1',
-        title: 'Deep Dive To Open Source',
-        shortDescription:
-            'Open-source software could change the complete workflow of a team or organization. Want to learn how? Want to know about Git? Follow the link!',
-        timestamp: 1643029520306,
-        artwork:
-            'https://miro.medium.com/max/1400/1*7JtRMnaocFHa2rv1n1YVBQ.png',
-        pageTitle: 'All about your first contribution in GitHub | Sobhan Bera',
-        isBlog: true,
-        link: 'deep-dive-to-open-source-with-github',
-        mediumLink:
-            'https://medium.com/dsc-ghrce/open-source-by-sobhanbera-2388c07b5117',
-        property: 'First Blog',
-        tags: ['Open Source', 'Git', 'GitHub', 'Command', 'Contribute'],
-    },
-]
+/**
+ * this object is a blueprint to carry the project data which is displayed in the website
+ * id: unique id of the project
+ * year: in which year does the project was done or carried out
+ * title: name of the project
+ * techstacks: list of technologies used in the project
+ * link: any reference link for the project
+ * github: if public repo is there
+ * playstore: if it was any android app
+ * company: for what company this was made
+ * companyURL: official website of the company
+ * otherLink: there might be other kind of list too
+ * iconType: what type of icon to show in the project card's header's right side
+ */
+export interface ProjectObject {
+    id: number | string
+    year: number
+    title: string
+    techstacks: string[]
+    link: string
+    github?: string
+    playstore?: string
+    otherLink?: string
+    org: string
+    orgURL?: string
+    description: string
+    iconType: 'code' | 'web' | 'android'
+}

@@ -14,7 +14,7 @@
 
         max-width: 1000px;
         width: 1200px;
-        min-height: 80vh;
+        min-height: 90vh;
 
         .getInTouchText {
             font-size: 50px;
@@ -212,7 +212,7 @@
                     fill: var(--silver);
                     width: 32px;
                     height: 32px;
-                    padding: 5px;
+                    padding: 8px;
                     cursor: pointer;
 
                     border-radius: 100px;
@@ -375,9 +375,10 @@
     .contactMeContainer {
         .contactMeWrapper {
             width: 100%;
-            padding: 0 22px;
+            padding: 0 22px 75px 22px;
 
             .getInTouchText {
+                padding-top: 100px;
                 font-size: 32px;
             }
 
@@ -392,6 +393,16 @@
                         font-size: 13px;
                     }
                 }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .contactMeContainer {
+        .contactMeWrapper {
+            .getInTouchText {
+                padding-top: 150px;
             }
         }
     }

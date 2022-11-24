@@ -1,56 +1,49 @@
-import {useEffect, useRef} from 'react'
 import Head from 'next/head'
 
-import gsap from 'gsap'
-import {motion} from 'framer-motion'
+// import gsap from 'gsap'
+// import {motion} from 'framer-motion'
 
 import styles from '../styles/pages/landing.module.scss'
-import {
-    Footer,
-    Greeting,
-    Header,
-    InfiniteLoopingScrollView,
-} from '../components'
 import Introduction from '../containers/Intro'
 import AboutMe from '../containers/AboutMe'
 import MyBlogs from '../containers/MyBlogs'
 import SkillsSection from '../containers/SkillsSection'
-// import Projects from '../containers/Projects'
+import Projects from '../containers/Projects'
 import ContactMe from '../containers/ContactMe'
+import {ThemeBackgroundColors, useThemeSystem} from '../contexts/ThemeSystem'
+import {FloatingFooter} from '../components'
 
 export default function Home() {
+    const {theme} = useThemeSystem()
+
     return (
-        <div className={styles.mainRoot}>
+        <div>
             <Head>
                 <title>
-                    Sobhan Bera • Developer • Student • Competitive Programmer •
-                    Freelancer
+                    Sobhan Bera • Software Developer | Competitive Programmer |
+                    Freelancer | Student
                 </title>
+
+                <meta
+                    name="theme-color"
+                    content={ThemeBackgroundColors[theme]}
+                />
             </Head>
 
-            <Greeting />
+            <Introduction />
 
-            {/* <InfiniteLoopingScrollView verticalBackups={4}> */}
-            <main className={styles.root}>
-                <Header />
+            <AboutMe />
 
-                <div className={styles.mainContainer}>
-                    <Introduction />
+            <SkillsSection />
 
-                    <AboutMe />
+            <MyBlogs limit={3} showMoreBlogs={true} />
 
-                    <MyBlogs />
+            <Projects />
 
-                    <SkillsSection />
+            <ContactMe />
 
-                    {/* <Projects /> */}
-
-                    <ContactMe />
-                </div>
-
-                <Footer />
-            </main>
-            {/* </InfiniteLoopingScrollView> */}
+            {/* footer which floats */}
+            <FloatingFooter />
         </div>
     )
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 import 'aos/dist/aos.css'
 
@@ -27,20 +28,26 @@ export default function AboutMe() {
                     <p className={styles.line}></p>
                 </div>
 
-                <div className={styles.description}>
-                    <p className={styles.aboutMeText} data-aos="fade-up">
-                        {ABOUT_ME_TEXT1}
-                    </p>
+                <div className={styles.aboutDescriptors}>
+                    <div className={styles.description}>
+                        <p className={styles.aboutMeText} data-aos="fade-up">
+                            {ABOUT_ME_TEXT1}
+                        </p>
 
-                    <p className={styles.aboutMeText} data-aos="fade-up">
-                        {ABOUT_ME_TEXT2}
-                    </p>
+                        <p className={styles.aboutMeText} data-aos="fade-up">
+                            {ABOUT_ME_TEXT2}
+                        </p>
 
-                    <p className={styles.aboutMeText} data-aos="fade-up">
-                        {ABOUT_ME_TEXT3}
-                    </p>
+                        <p className={styles.aboutMeText} data-aos="fade-up">
+                            {ABOUT_ME_TEXT3}
+                        </p>
+                    </div>
+
+                    {/* this is the developer's pic */}
+                    <div className={styles.developerArtwork} data-aos="fade-up">
+                        <img alt={'sobhan bera'} src={'/imgs/sobhanbera.jpg'} />
+                    </div>
                 </div>
-                <div></div>
             </div>
         </div>
     )
