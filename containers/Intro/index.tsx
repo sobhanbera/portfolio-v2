@@ -26,7 +26,11 @@ export default function Introduction() {
 
                 <button className={styles.resumeDownloadButton}>
                     <Link href={RESUME_LOCAL_URL}>
-                        <a href={RESUME_LOCAL_URL} target="_blank" download>
+                        <a
+                            href={RESUME_LOCAL_URL}
+                            target="_blank"
+                            rel="noreferrer"
+                            download>
                             {'Download my Resume!'}
                         </a>
                     </Link>

@@ -4,6 +4,7 @@ import Link from 'next/link'
 import {
     ABOUT_ME_TAG,
     CONTACT_ME_TAG,
+    GITHUB_SPONSOR_URL,
     GITHUB_URL,
     HOME_URL_OR_STRING,
     HOME_URL_OR_TAG,
@@ -134,6 +135,14 @@ export default function Header() {
                                 </Link>
                             </li>
                         </CursorLover>
+
+                        <button className={styles.githubSponserButton}>
+                            <Link href={GITHUB_SPONSOR_URL}>
+                                <a target={'_blank'} rel="noreferrer">
+                                    Sponser
+                                </a>
+                            </Link>
+                        </button>
                     </ol>
 
                     <div
@@ -223,12 +232,25 @@ export default function Header() {
                                     </Link>
                                 </li>
 
-                                {/* theme randomizer button in header menu */}
-                                <p
-                                    className={styles.randomizeThemeBtn}
-                                    onClick={randomizeTheme}>
-                                    {`Theme - ${themeName}`}
-                                </p>
+                                <div className={styles.centered}>
+                                    <button
+                                        className={styles.githubSponserButton}>
+                                        <Link href={GITHUB_SPONSOR_URL}>
+                                            <a
+                                                target={'_blank'}
+                                                rel="noreferrer">
+                                                Sponser
+                                            </a>
+                                        </Link>
+                                    </button>
+
+                                    {/* theme randomizer button in header menu */}
+                                    <p
+                                        className={styles.randomizeThemeBtn}
+                                        onClick={randomizeTheme}>
+                                        {`Theme - ${themeName}`}
+                                    </p>
+                                </div>
                             </ol>
 
                             <div className={styles.socialMediaContainer}>
