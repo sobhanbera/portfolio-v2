@@ -24,8 +24,9 @@ import {
 
 import MetaDatas from './MetaData'
 import BlogCard from './BlogCard'
+import ProjectCard from './ProjectCard'
 import MarkdownRenderer from './MarkdownRenderer'
-export {MetaDatas, BlogCard, MarkdownRenderer}
+export {MetaDatas, BlogCard, ProjectCard, MarkdownRenderer}
 
 import {
     DevelopmentSkillsTree,
