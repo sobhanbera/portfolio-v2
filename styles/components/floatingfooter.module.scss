@@ -41,7 +41,8 @@
                     }
 
                     // this is the special svg icon, this is the email icon which only works with fill and not with color tag in css
-                    &:nth-child(4) {
+                    &:nth-child(4),
+                    &:nth-child(5) {
                         a {
                             svg {
                                 fill: var(--silver);
@@ -55,6 +56,16 @@
                                     color: var(--primary);
                                     transform: scale(0.95);
                                 }
+                            }
+                        }
+                    }
+
+                    // by default the size of this svg is very small
+                    &:nth-child(5) {
+                        a {
+                            svg {
+                                width: 23px;
+                                height: 23px;
                             }
                         }
                     }
@@ -74,18 +85,6 @@
 }
 
 @media screen and (max-width: 1175px) {
-    .floatingFooter {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 1000px) {
-    .floatingFooter {
-        display: block;
-    }
-}
-
-@media screen and (max-width: 750px) {
     .floatingFooter {
         display: none;
     }

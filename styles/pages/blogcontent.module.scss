@@ -8,7 +8,7 @@
     .blogContainer {
         font-family: 'Source Serif Pro', Georgia, 'Times New Roman', Times,
             serif;
-        max-width: 720px;
+        max-width: 820px;
         margin: auto;
         white-space: pre-line;
 
@@ -43,7 +43,8 @@
         }
 
         .blogArtwork {
-            max-width: 720px;
+            max-width: 100%;
+            // max-height: 405px;
             margin-bottom: 10px;
 
             border-radius: 6px;

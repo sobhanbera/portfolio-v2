@@ -1,0 +1,156 @@
+.projectContainer {
+    min-height: 100vh;
+
+    width: 100%;
+    height: 100%;
+
+    .projectWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        margin: auto;
+
+        max-width: 1100px;
+        width: 1200px;
+        min-height: 90vh;
+
+        .projectHeader {
+            width: 100%;
+            margin: 26px 0;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            .projectHeading {
+                font-size: 32px;
+                font-weight: 600;
+
+                color: var(--silver);
+                text-align: center;
+            }
+
+            .line {
+                width: 350px;
+                padding: 3px 0px;
+                margin: 0 25px;
+
+                border-top: 1px solid rgba(var(--silver-rgb), 0.33);
+            }
+        }
+
+        .projectListContainer {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+    }
+}
+
+@keyframes update_svg_color {
+    0% {
+        color: var(--silver);
+    }
+    100% {
+        color: var(--primary);
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .projectContainer {
+        .projectWrapper {
+            width: 800px;
+
+            .nameText {
+                font-size: 65px;
+            }
+
+            .workText {
+                font-size: 62px;
+                max-width: 650px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .projectContainer {
+        .projectWrapper {
+            width: 600px;
+
+            .nameText {
+                font-size: 60px;
+            }
+
+            .workText {
+                font-size: 56px;
+                max-width: 650px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .projectContainer {
+        .projectWrapper {
+            width: 500px;
+
+            .nameText {
+                font-size: 50px;
+            }
+
+            .workText {
+                font-size: 46px;
+                max-width: 650px;
+            }
+
+            .resumeDownloadButton {
+                padding: 14px 24px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .projectContainer {
+        .projectWrapper {
+            width: 380px;
+
+            .nameText {
+                font-size: 40px;
+            }
+
+            .workText {
+                font-size: 36px;
+                max-width: 650px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .projectContainer {
+        .projectWrapper {
+            width: 100%;
+            padding: 0 50px;
+
+            .nameText {
+                font-size: 35px;
+            }
+
+            .workText {
+                font-size: 32px;
+                max-width: 650px;
+            }
+
+            .currentStatusText {
+                font-size: 16px;
+            }
+        }
+    }
+}

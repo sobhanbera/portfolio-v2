@@ -1,4 +1,3 @@
-import {} from 'react'
 import Head from 'next/head'
 
 // import gsap from 'gsap'
@@ -9,7 +8,7 @@ import Introduction from '../containers/Intro'
 import AboutMe from '../containers/AboutMe'
 import MyBlogs from '../containers/MyBlogs'
 import SkillsSection from '../containers/SkillsSection'
-// import Projects from '../containers/Projects'
+import Projects from '../containers/Projects'
 import ContactMe from '../containers/ContactMe'
 import {ThemeBackgroundColors, useThemeSystem} from '../contexts/ThemeSystem'
 import {FloatingFooter} from '../components'
@@ -35,11 +34,11 @@ export default function Home() {
 
             <AboutMe />
 
-            <MyBlogs limit={3} showMoreBlogs={true} />
-
             <SkillsSection />
 
-            {/* <Projects /> */}
+            <MyBlogs limit={3} showMoreBlogs={true} />
+
+            <Projects />
 
             <ContactMe />
 

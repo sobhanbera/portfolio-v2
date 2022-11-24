@@ -110,8 +110,8 @@
     --background-light: #542335;
     --background-light-rgb: 84, 35, 53;
 
-    --primary: #ff64da;
-    --primary-rgb: 255, 100, 218;
+    --primary: #ff6464;
+    --primary-rgb: 255, 100, 100;
 
     --silver: #f6ccd6;
     --silver-rgb: 246, 204, 214;
@@ -126,11 +126,11 @@
  light theme starts from here
 */
 .light-default {
-    --background: #dfdfdf;
-    --background-rgb: 223, 223, 223;
+    --background: #f7f7f7;
+    --background-rgb: 247, 247, 247;
 
-    --background-light: #afafaf;
-    --background-light-rgb: 175, 175, 175;
+    --background-light: #e7e7e7;
+    --background-light-rgb: 231, 231, 231;
 
     --primary: #0f60b6;
     --primary-rgb: 15, 96, 182;
@@ -145,11 +145,11 @@
     --shadow-rgb: 191, 191, 191;
 }
 .light-blue {
-    --background: #dfdfdf;
-    --background-rgb: 223, 223, 223;
+    --background: #f7f7f7;
+    --background-rgb: 247, 247, 247;
 
-    --background-light: #afafaf;
-    --background-light-rgb: 175, 175, 175;
+    --background-light: #e7e7e7;
+    --background-light-rgb: 231, 231, 231;
 
     --primary: #0f60b6;
     --primary-rgb: 15, 96, 182;
@@ -164,11 +164,11 @@
     --shadow-rgb: 191, 191, 191;
 }
 .light-pink {
-    --background: #dfdfdf;
-    --background-rgb: 223, 223, 223;
+    --background: #f7f7f7;
+    --background-rgb: 247, 247, 247;
 
-    --background-light: #afafaf;
-    --background-light-rgb: 175, 175, 175;
+    --background-light: #e7e7e7;
+    --background-light-rgb: 231, 231, 231;
 
     --primary: #600fb6;
     --primary-rgb: 96, 15, 182;
@@ -183,11 +183,11 @@
     --shadow-rgb: 191, 191, 191;
 }
 .light-green {
-    --background: #dfdfdf;
-    --background-rgb: 223, 223, 223;
+    --background: #f7f7f7;
+    --background-rgb: 247, 247, 247;
 
-    --background-light: #afafaf;
-    --background-light-rgb: 175, 175, 175;
+    --background-light: #e7e7e7;
+    --background-light-rgb: 231, 231, 231;
 
     --primary: #0fb660;
     --primary-rgb: 15, 182, 96;
@@ -202,11 +202,11 @@
     --shadow-rgb: 191, 191, 191;
 }
 .light-yellow {
-    --background: #dfdfdf;
-    --background-rgb: 223, 223, 223;
+    --background: #f7f7f7;
+    --background-rgb: 247, 247, 247;
 
-    --background-light: #afafaf;
-    --background-light-rgb: 175, 175, 175;
+    --background-light: #e7e7e7;
+    --background-light-rgb: 231, 231, 231;
 
     --primary: #b6600f;
     --primary-rgb: 182, 96, 15;
@@ -221,13 +221,13 @@
     --shadow-rgb: 191, 191, 191;
 }
 .light-red {
-    --background: #dfdfdf;
-    --background-rgb: 223, 223, 223;
+    --background: #f7f7f7;
+    --background-rgb: 247, 247, 247;
 
-    --background-light: #afafaf;
-    --background-light-rgb: 175, 175, 175;
+    --background-light: #e7e7e7;
+    --background-light-rgb: 231, 231, 231;
 
-    --primary: #b60f60;
+    --primary: #b60f0f;
     --primary-rgb: 182, 15, 96;
 
     --silver: #2f0a19;
@@ -264,7 +264,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    background: transparent;
+    background: var(--background);
 }
 
 ::-webkit-scrollbar-thumb {

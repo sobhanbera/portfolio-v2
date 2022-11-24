@@ -18,7 +18,7 @@
 
         max-width: 1000px;
         width: 1200px;
-        min-height: 80vh;
+        min-height: 90vh;
 
         .blogsHeader {
             width: 100%;
@@ -178,6 +178,10 @@
         .blogsWrapper {
             width: 100%;
             padding: 0 0px;
+
+            .blogsHeader {
+                padding-top: 100px;
+            }
 
             .blogsHeader {
                 .blogsHeading {
