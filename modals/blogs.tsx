@@ -27,3 +27,32 @@ export interface Blog {
     property: string
     tags: string[]
 }
+
+/**
+ * this object is a blueprint to carry the project data which is displayed in the website
+ * id: unique id of the project
+ * year: in which year does the project was done or carried out
+ * title: name of the project
+ * techstacks: list of technologies used in the project
+ * link: any reference link for the project
+ * github: if public repo is there
+ * playstore: if it was any android app
+ * company: for what company this was made
+ * companyURL: official website of the company
+ * otherLink: there might be other kind of list too
+ * iconType: what type of icon to show in the project card's header's right side
+ */
+export interface ProjectObject {
+    id: number | string
+    year: number
+    title: string
+    techstacks: string[]
+    link: string
+    github?: string
+    playstore?: string
+    otherLink?: string
+    org: string
+    orgURL?: string
+    description: string
+    iconType: 'code' | 'web' | 'android'
+}
