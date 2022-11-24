@@ -16,6 +16,9 @@ import {
     LinkedinSvg,
     TwitterSvg,
     WebsiteSvg,
+    //
+    CodeSvg,
+    AndroidSvg,
 } from './Svgs'
 
 import MetaDatas from './MetaData'
@@ -40,3 +43,4 @@ export {
     CursorLover,
 }
 export {EmailSvg, GitHubSvg, InstagramSvg, LinkedinSvg, TwitterSvg, WebsiteSvg}
+export {CodeSvg, AndroidSvg}
