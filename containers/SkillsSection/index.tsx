@@ -13,7 +13,7 @@ export default function SkillsSection() {
     return (
         <div className={styles.skillsContainer} id={MY_EXPERIENCE_STRING}>
             <div className={styles.skillsWrapper}>
-                <div className={styles.skillsHeader}>
+                <div className={styles.skillsHeader} data-aos="fade-up">
                     <p className={styles.line}></p>
                     <p className={styles.skillsHeading}>{'Technologies'}</p>
                     <p className={styles.line}></p>

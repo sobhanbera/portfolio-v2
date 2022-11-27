@@ -25,8 +25,9 @@ function MyApp({Component, pageProps}: AppProps) {
         aos.init({
             duration: 1828.3268, // birthday digits (everybody?) :)...
             initClassName: 'sb-initial-anim',
-            once: false,
+            once: true,
             mirror: true,
+            offset: 50,
             debounceDelay: 100,
             throttleDelay: 100,
         })
