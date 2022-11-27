@@ -92,8 +92,14 @@
             border-radius: 4px;
             border: 1px solid var(--primary);
 
-            padding: 18px 30px;
+            // padding: 18px 30px;
             margin: 20px 0px;
+
+            a {
+                font-family: Karla;
+                display: block;
+                padding: 18px 30px;
+            }
 
             &:hover {
                 background-color: rgba(var(--primary-rgb), 0.1);
@@ -151,7 +157,9 @@
             }
 
             .resumeDownloadButton {
-                padding: 14px 24px;
+                a {
+                    padding: 14px 24px;
+                }
             }
         }
     }
