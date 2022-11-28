@@ -25,11 +25,8 @@ export default function ProjectCard({projectData}: ProjectCardProps) {
 
     return (
         <Link href={link}>
-            <a
-                target={'_blank'}
-                className={styles.projectCard}
-                data-aos="fade-up">
-                <div className={styles.projectCardHolder}>
+            <a target={'_blank'} className={styles.projectCard}>
+                <div className={styles.projectCardHolder} data-aos="fade-up">
                     <div className={styles.projectInitials}>
                         <div className={styles.projectHeader}>
                             <div className={styles.headerIcon}>
