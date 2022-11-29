@@ -1,4 +1,5 @@
-import React, {useEffect, useState} from 'react'
+import React, {useState} from 'react'
+import axios from 'axios'
 
 import styles from '../../styles/containers/contactme.module.scss'
 import 'aos/dist/aos.css'
@@ -59,7 +60,15 @@ export default function ContactMe() {
                      *
                      * this is optional
                      */
-                    // TODO
+                    axios
+                        .post('/api/contactmail', {
+                            email: email,
+                            message: message,
+                            name: fullname,
+                            org: org,
+                        })
+                        .then(_res => {})
+                        .catch(_err => {})
                 } else {
                     // disable loading and all other stuffs when error
                     setLoading(false)
