@@ -1,20 +1,13 @@
+/* eslint-disable @next/next/no-img-element */
 import React, {ReactElement, useEffect, useState} from 'react'
 import Head from 'next/head'
-import Link from 'next/link'
-import Image from 'next/image'
 import {useRouter} from 'next/router'
 
-import remarkGfm from 'remark-gfm'
-import ReactMarkdown from 'react-markdown'
-import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter'
-
 import styles from '../../styles/pages/blogcontent.module.scss'
-import markdownStyle from '../../styles/components/markdown.module.scss'
 
 import {Blog} from '../../modals/blogs'
 import {BlogsList} from '../../contents/blogs'
 import {ThemeBackgroundColors, useThemeSystem} from '../../contexts/ThemeSystem'
-import {LightCodeTheme, DarkCodeTheme} from '../../contents/themes'
 import dayjs from 'dayjs'
 import {MarkdownRenderer} from '../../components'
 
