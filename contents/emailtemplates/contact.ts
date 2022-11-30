@@ -73,7 +73,7 @@ const contactEmailTemplate = ({name, email, org, message}: EmailClientData) => `
             <div></div>
 
             <div class="quote">
-                <p>Your Message</p>
+                <p>Your Message -</p>
                 <p>${message}</p>
             </div>
         </div>

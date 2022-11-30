@@ -63,7 +63,7 @@ export default function ContactMe() {
                     axios
                         .post('/api/contactmail', {
                             email: email,
-                            message: message,
+                            message: message.replaceAll('\n', '\\n'), // to format the message perfectly this replacement statement is required
                             name: fullname,
                             org: org,
                         })
@@ -146,14 +146,14 @@ export default function ContactMe() {
 
                     <div className={styles.inputWrapper} data-aos="fade-up">
                         <textarea
-                            onChange={e =>
+                            onChange={e => {
                                 setMessage(
-                                    e.target.value.replace(
+                                    e.target.value.replaceAll(
                                         /(?:\r\n|\r|\n)/g,
                                         '\n',
                                     ),
                                 )
-                            }
+                            }}
                             value={message}
                             required
                             placeholder="Tell me! I'm very inquisitive."
