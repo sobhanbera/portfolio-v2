@@ -29,13 +29,11 @@ export default function SendMailAfterContacting(
                     res.status(200).json({
                         error: false,
                         code: EMAIL_SENT,
-                        emailSent,
                     })
                 } else {
                     res.status(200).json({
                         error: true,
                         code: EMAIL_NOT_SENT,
-                        asdf: 'asdfsaf',
                     })
                 }
             })
@@ -43,7 +41,6 @@ export default function SendMailAfterContacting(
                 res.status(200).json({
                     error: true,
                     code: EMAIL_NOT_SENT,
-                    _err,
                 })
             })
     }
