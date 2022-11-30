@@ -55,8 +55,9 @@ const contactEmailTemplate = ({name, email, org, message}: EmailClientData) => `
             <div>
                 <p>
                     Thanks for contacting me! I am glad that you got to this
-                    point and will respond to you very soon. Till then, do
-                    connect with me on
+                    point. I look forward to communicating with you and will
+                    respond very soon. Till then, you can also connect with me
+                    on
                     <a href="http://linkedin.com/in/sobhanbera">LinkedIn</a>
                     for more robust communication.
                 </p>
