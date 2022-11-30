@@ -14,7 +14,15 @@ let EmailClient = nodemailer.createTransport({
     host: 'smtp.gmail.com',
 })
 
-export function sendMail({email, org, message, name}: EmailClientData) {
+export function sendMail({
+    email,
+    org,
+    message,
+    name,
+}: EmailClientData): Promise<{
+    log: any
+    result: boolean
+}> {
     const emailTemplate = contactEmailTemplate({
         email,
         org,
@@ -38,12 +46,20 @@ export function sendMail({email, org, message, name}: EmailClientData) {
             html: emailTemplate,
         })
             .then((_result: any) => {
-                console.log('_result', _result)
-                resolve(true)
+                // console.log('_result', _result)
+
+                resolve({
+                    result: true,
+                    log: _result,
+                })
             })
             .catch((_err: any) => {
-                console.log(_err)
-                resolve(false)
+                // console.log(_err)
+
+                resolve({
+                    result: false,
+                    log: _err,
+                })
             })
     })
 }

@@ -23,15 +23,28 @@ export default function SendMailAfterContacting(
             name,
             email,
             message,
-        }).then(emailSent => {
-            if (emailSent) {
-                res.status(200).json({
-                    error: false,
-                    code: EMAIL_SENT,
-                })
-            } else {
-                res.status(200).json({error: true, code: EMAIL_NOT_SENT})
-            }
         })
+            .then(emailSent => {
+                if (emailSent.result) {
+                    res.status(200).json({
+                        error: false,
+                        code: EMAIL_SENT,
+                        emailSent,
+                    })
+                } else {
+                    res.status(200).json({
+                        error: true,
+                        code: EMAIL_NOT_SENT,
+                        asdf: 'asdfsaf',
+                    })
+                }
+            })
+            .catch(_err => {
+                res.status(200).json({
+                    error: true,
+                    code: EMAIL_NOT_SENT,
+                    _err,
+                })
+            })
     }
 }
