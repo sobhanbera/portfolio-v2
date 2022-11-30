@@ -1,7 +1,6 @@
 import type {NextApiRequest, NextApiResponse} from 'next'
 
 import {EMAIL_NOT_SENT, EMAIL_SENT, INVALID_PAYLOAD} from '../../constants'
-import {EMAIL, EMAIL_PASSWORD} from '../../configs'
 import {sendMail} from '../../utils'
 
 export default function SendMailAfterContacting(
@@ -14,27 +13,25 @@ export default function SendMailAfterContacting(
     const message = String(req.body.message) || '' // the actual message he sent
 
     if (!email || !message || !name) {
-        return res.status(200).json({
+        res.status(200).json({
             error: true,
             code: INVALID_PAYLOAD,
         })
     } else {
-        // sendMail({
-        //     org,
-        //     name,
-        //     email,
-        //     message,
-        // }).then(emailSent => {
-        //     if (emailSent) {
-        res.status(200).json({
-            error: false,
-            code: EMAIL_SENT,
-            email: EMAIL,
-            pass: EMAIL_PASSWORD,
+        sendMail({
+            org,
+            name,
+            email,
+            message,
+        }).then(emailSent => {
+            if (emailSent) {
+                res.status(200).json({
+                    error: false,
+                    code: EMAIL_SENT,
+                })
+            } else {
+                res.status(200).json({error: true, code: EMAIL_NOT_SENT})
+            }
         })
-        //     } else {
-        //         res.status(200).json({error: true, code: EMAIL_NOT_SENT})
-        //     }
-        // })
     }
 }
