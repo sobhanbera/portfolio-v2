@@ -27,22 +27,22 @@ export function sendMail({email, org, message, name}: EmailClientData) {
         console.log(EMAIL, EMAIL_PASSWORD)
         EmailClient.sendMail({
             from: EMAIL,
-            to: [email, MY_EMAIL_ID], // sending mail to me and the user together, so that I also get the notification
+            to: [email], // sending mail to me and the user together, so that I also get the notification
+            cc: [MY_EMAIL_ID], // this is my email id
+            envelope: {
+                from: EMAIL,
+                to: email,
+            },
+
             subject: defaultEmailSubject,
             html: emailTemplate,
         })
-            .then((_result: any) => resolve(true))
+            .then((_result: any) => {
+                console.log('_result', _result)
+                resolve(true)
+            })
             .catch((_err: any) => {
-                EmailClient = nodemailer.createTransport({
-                    service: 'gmail',
-                    auth: {
-                        user: EMAIL,
-                        pass: EMAIL_PASSWORD,
-                    },
-                    // host: 'smtp.gmail.com',
-                })
-
-                // console.log(_err)
+                console.log(_err)
                 resolve(false)
             })
     })
