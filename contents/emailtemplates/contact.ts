@@ -28,6 +28,14 @@ const contactEmailTemplate = ({name, email, org, message}: EmailClientData) => `
                 padding: 10px 0;
             }
 
+            .root div.quote {
+                padding-left: 15px;
+                padding: 10px 15px;
+                border-left: 2px solid grey;
+                margin-left: 5px;
+                color: grey;
+            }
+
             a,
             a:hover,
             a:active,
@@ -47,8 +55,9 @@ const contactEmailTemplate = ({name, email, org, message}: EmailClientData) => `
             <div>
                 <p>
                     Thanks for contacting me! I am glad that you got to this
-                    point and will respond to you very soon. Till then, do
-                    connect with me on
+                    point. I look forward to communicating with you and will
+                    respond very soon. Till then, you can also connect with me
+                    on
                     <a href="http://linkedin.com/in/sobhanbera">LinkedIn</a>
                     for more robust communication.
                 </p>
@@ -61,10 +70,16 @@ const contactEmailTemplate = ({name, email, org, message}: EmailClientData) => `
                 </p>
                 <p>Developer</p>
             </div>
+
+            <div></div>
+
+            <div class="quote">
+                <p>Your Message -</p>
+                <p>${message.replaceAll('\\n', '<br />')}</p>
+            </div>
         </div>
     </body>
 </html>
-
 `
 
 export default contactEmailTemplate

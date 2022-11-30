@@ -12,8 +12,8 @@ export default function SendMailAfterContacting(
     const email = String(req.body.email) || '' // his email address
     const message = String(req.body.message) || '' // the actual message he sent
 
-    if (!email || !message) {
-        return res.status(200).json({
+    if (!email || !message || !name) {
+        res.status(200).json({
             error: true,
             code: INVALID_PAYLOAD,
         })
@@ -23,12 +23,25 @@ export default function SendMailAfterContacting(
             name,
             email,
             message,
-        }).then(emailSent => {
-            if (emailSent) {
-                res.status(200).json({error: false, code: EMAIL_SENT})
-            } else {
-                res.status(200).json({error: true, code: EMAIL_NOT_SENT})
-            }
         })
+            .then(emailSent => {
+                if (emailSent.result) {
+                    res.status(200).json({
+                        error: false,
+                        code: EMAIL_SENT,
+                    })
+                } else {
+                    res.status(200).json({
+                        error: true,
+                        code: EMAIL_NOT_SENT,
+                    })
+                }
+            })
+            .catch(_err => {
+                res.status(200).json({
+                    error: true,
+                    code: EMAIL_NOT_SENT,
+                })
+            })
     }
 }

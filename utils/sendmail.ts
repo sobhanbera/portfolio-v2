@@ -11,10 +11,18 @@ let EmailClient = nodemailer.createTransport({
         user: EMAIL,
         pass: EMAIL_PASSWORD,
     },
-    // host: 'smtp.gmail.com',
+    host: 'smtp.gmail.com',
 })
 
-export function sendMail({email, org, message, name}: EmailClientData) {
+export function sendMail({
+    email,
+    org,
+    message,
+    name,
+}: EmailClientData): Promise<{
+    log: any
+    result: boolean
+}> {
     const emailTemplate = contactEmailTemplate({
         email,
         org,
@@ -27,23 +35,31 @@ export function sendMail({email, org, message, name}: EmailClientData) {
         console.log(EMAIL, EMAIL_PASSWORD)
         EmailClient.sendMail({
             from: EMAIL,
-            to: [email, MY_EMAIL_ID], // sending mail to me and the user together, so that I also get the notification
+            to: [email], // sending mail to me and the user together, so that I also get the notification
+            cc: [MY_EMAIL_ID], // this is my email id
+            envelope: {
+                from: EMAIL,
+                to: email,
+            },
+
             subject: defaultEmailSubject,
             html: emailTemplate,
         })
-            .then((_result: any) => resolve(true))
-            .catch((_err: any) => {
-                EmailClient = nodemailer.createTransport({
-                    service: 'gmail',
-                    auth: {
-                        user: EMAIL,
-                        pass: EMAIL_PASSWORD,
-                    },
-                    // host: 'smtp.gmail.com',
-                })
+            .then((_result: any) => {
+                // console.log('_result', _result)
 
+                resolve({
+                    result: true,
+                    log: _result,
+                })
+            })
+            .catch((_err: any) => {
                 // console.log(_err)
-                resolve(false)
+
+                resolve({
+                    result: false,
+                    log: _err,
+                })
             })
     })
 }
