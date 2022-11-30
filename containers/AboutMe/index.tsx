@@ -22,7 +22,7 @@ export default function AboutMe() {
     return (
         <div className={styles.aboutMeContainer} id={ABOUT_ME_STRING}>
             <div className={styles.aboutMeWrapper}>
-                <div className={styles.aboutMeHeader}>
+                <div className={styles.aboutMeHeader} data-aos="fade-up">
                     <p className={styles.line}></p>
                     <p className={styles.aboutMeHeading}>{'About Me '}</p>
                     <p className={styles.line}></p>

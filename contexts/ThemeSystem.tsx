@@ -1,67 +1,54 @@
-import React, { createContext, useContext, useEffect, useState } from 'react'
+import React, {createContext, useContext, useEffect, useState} from 'react'
 import Head from 'next/head'
 
-type ThemeTypes =
-	| 'dark-default'
-	| 'dark-blue'
-	| 'dark-pink'
-	| 'dark-green'
-	| 'dark-yellow'
-	| 'dark-red'
-	// light themes
-	| 'light-default'
-	| 'light-blue'
-	| 'light-pink'
-	| 'light-green'
-	| 'light-yellow'
-	| 'light-red'
+import {ThemeTypes} from '../modals'
 
 // these are the primary theme background color for every theme
 // this will be used to render colour in the bar of browsers
 export const ThemeBackgroundColors = {
-	'dark-default': '#0a192f',
-	'dark-blue': '#0a192f',
-	'dark-pink': '#190a2f',
-	'dark-green': '#0a2f19',
-	'dark-yellow': '#2f190a',
-	'dark-red': '#2f0a19',
-	// light theme bg colors
-	'light-default': '#0a192f',
-	'light-blue': '#0a192f',
-	'light-pink': '#190a2f',
-	'light-green': '#0a2f19',
-	'light-yellow': '#2f190a',
-	'light-red': '#2f0a19',
+    'dark-default': '#0a192f',
+    'dark-blue': '#0a192f',
+    'dark-pink': '#190a2f',
+    'dark-green': '#0a2f19',
+    'dark-yellow': '#2f190a',
+    'dark-red': '#2f0a19',
+    // light theme bg colors
+    'light-default': '#0a192f',
+    'light-blue': '#0a192f',
+    'light-pink': '#190a2f',
+    'light-green': '#0a2f19',
+    'light-yellow': '#2f190a',
+    'light-red': '#2f0a19',
 }
 
 export const AvailableThemesArray: ThemeTypes[] = [
-	'dark-default',
-	'dark-blue',
-	'dark-pink',
-	'dark-green',
-	'dark-yellow',
-	'dark-red',
-	// light themes
-	'light-default',
-	'light-blue',
-	'light-pink',
-	'light-green',
-	'light-yellow',
-	'light-red',
+    'dark-default',
+    'dark-blue',
+    'dark-pink',
+    'dark-green',
+    'dark-yellow',
+    'dark-red',
+    // light themes
+    'light-default',
+    'light-blue',
+    'light-pink',
+    'light-green',
+    'light-yellow',
+    'light-red',
 ]
-export const ThemesName: Array<{ themeCode: ThemeTypes; themeName: string }> = [
-	{ themeCode: 'dark-default', themeName: 'Dark Default' },
-	{ themeCode: 'dark-blue', themeName: 'Dark Blue' },
-	{ themeCode: 'dark-pink', themeName: 'Dark Pink' },
-	{ themeCode: 'dark-green', themeName: 'Dark Green' },
-	{ themeCode: 'dark-yellow', themeName: 'Dark Yellow' },
-	{ themeCode: 'dark-red', themeName: 'Dark Red' },
-	{ themeCode: 'light-default', themeName: 'Light Default' },
-	{ themeCode: 'light-blue', themeName: 'Light Blue' },
-	{ themeCode: 'light-pink', themeName: 'Light Pink' },
-	{ themeCode: 'light-green', themeName: 'Light Green' },
-	{ themeCode: 'light-yellow', themeName: 'Light Yellow' },
-	{ themeCode: 'light-red', themeName: 'Light Red' },
+export const ThemesName: Array<{themeCode: ThemeTypes; themeName: string}> = [
+    {themeCode: 'dark-default', themeName: 'Dark Default'},
+    {themeCode: 'dark-blue', themeName: 'Dark Blue'},
+    {themeCode: 'dark-pink', themeName: 'Dark Pink'},
+    {themeCode: 'dark-green', themeName: 'Dark Green'},
+    {themeCode: 'dark-yellow', themeName: 'Dark Yellow'},
+    {themeCode: 'dark-red', themeName: 'Dark Red'},
+    {themeCode: 'light-default', themeName: 'Light Default'},
+    {themeCode: 'light-blue', themeName: 'Light Blue'},
+    {themeCode: 'light-pink', themeName: 'Light Pink'},
+    {themeCode: 'light-green', themeName: 'Light Green'},
+    {themeCode: 'light-yellow', themeName: 'Light Yellow'},
+    {themeCode: 'light-red', themeName: 'Light Red'},
 ]
 /**
  *
@@ -69,85 +56,85 @@ export const ThemesName: Array<{ themeCode: ThemeTypes; themeName: string }> = [
  * @returns if the theme provided is valid through this website or not...
  */
 function isOfTypeTheme(theme: ThemeTypes): theme is ThemeTypes {
-	return AvailableThemesArray.includes(theme)
+    return AvailableThemesArray.includes(theme)
 }
 const DEFAULT_THEME: ThemeTypes = 'dark-default'
 const DEFAULT_THEME_NAME: string = 'Dark Default'
 
 interface ThemeSystemContextProp {
-	theme: ThemeTypes
-	themeName: string
-	randomizeTheme(): any
+    theme: ThemeTypes
+    themeName: string
+    randomizeTheme(): any
 }
 const ThemeSystemContext = createContext<ThemeSystemContextProp>({
-	theme: DEFAULT_THEME,
-	themeName: DEFAULT_THEME_NAME,
-	randomizeTheme: () => { },
+    theme: DEFAULT_THEME,
+    themeName: DEFAULT_THEME_NAME,
+    randomizeTheme: () => {},
 })
 interface Props {
-	children: React.ReactChild
+    children: React.ReactChild
 }
 export default function ThemeSystem(props: Props) {
-	const [theme, setTheme] = useState<ThemeTypes>(DEFAULT_THEME) // the theme code
-	const [themeName, setThemeName] = useState<string>(DEFAULT_THEME_NAME) // the actual themes name dedicatd to each theme code
+    const [theme, setTheme] = useState<ThemeTypes>(DEFAULT_THEME) // the theme code
+    const [themeName, setThemeName] = useState<string>(DEFAULT_THEME_NAME) // the actual themes name dedicatd to each theme code
 
-	const setThemeLocal = () => { }
+    const setThemeLocal = () => {}
 
-	/**
-	 * selects a random theme for every instance of the website
-	 */
-	const selectRandomTheme = () => {
-		const randomTheme =
-			AvailableThemesArray[
-			Math.floor(Math.random() * AvailableThemesArray.length)
-			]
-		setTheme(randomTheme)
-		document.body.className = randomTheme
+    /**
+     * selects a random theme for every instance of the website
+     */
+    const selectRandomTheme = () => {
+        const randomTheme =
+            AvailableThemesArray[
+                Math.floor(Math.random() * AvailableThemesArray.length)
+            ]
+        setTheme(randomTheme)
+        document.body.className = randomTheme
 
-		// also update the theme name
-		const themeNameLocal = ThemesName.filter(
-			themeName => themeName.themeCode === randomTheme,
-		)
-		setThemeName(themeNameLocal[0].themeName)
-	}
+        // also update the theme name
+        const themeNameLocal = ThemesName.filter(
+            themeName => themeName.themeCode === randomTheme,
+        )
+        setThemeName(themeNameLocal[0].themeName)
+    }
 
-	useEffect(() => {
-		selectRandomTheme()
-	}, [])
+    useEffect(() => {
+        selectRandomTheme()
+    }, [])
 
-	useEffect(() => {
-		// curently disabled the local storage feature
-		//
-		// const themeLocal: ThemeTypes = localStorage.theme
-		// const finalTheme = isOfTypeTheme(themeLocal)
-		//     ? themeLocal
-		//     : DEFAULT_THEME
-		// setTheme(finalTheme)
-	}, [])
+    useEffect(() => {
+        // curently disabled the local storage feature
+        //
+        // const themeLocal: ThemeTypes = localStorage.theme
+        // const finalTheme = isOfTypeTheme(themeLocal)
+        //     ? themeLocal
+        //     : DEFAULT_THEME
+        // setTheme(finalTheme)
+    }, [])
 
-	const value = {
-		theme,
-		themeName,
-		randomizeTheme: selectRandomTheme,
-	}
-	return (
-		<ThemeSystemContext.Provider value={value}>
-			{/* <div
+    const value = {
+        theme,
+        themeName,
+        randomizeTheme: selectRandomTheme,
+    }
+    return (
+        <ThemeSystemContext.Provider value={value}>
+            {/* <div
                 className={
                     AvailableThemesArray[
                         Math.floor(Math.random() * AvailableThemesArray.length)
                     ]
                 }> */}
 
-			<Head>
-				<meta name="theme-color" content="#000000" />
-			</Head>
+            <Head>
+                <meta name="theme-color" content="#000000" />
+            </Head>
 
-			{props.children}
+            {props.children}
 
-			{/* </div> */}
-		</ThemeSystemContext.Provider>
-	)
+            {/* </div> */}
+        </ThemeSystemContext.Provider>
+    )
 }
 
 export const useThemeSystem = () => useContext(ThemeSystemContext)

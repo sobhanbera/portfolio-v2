@@ -44,7 +44,7 @@ export default function Greeting() {
         // next when the gretting is finished normalize the scroll behaviour
         // that's it for the scroll UIUX
         document.body.style.overflow = 'hidden'
-        console.log('value', document.body.style.overflow)
+        // console.log('value', document.body.style.overflow)
 
         // to update the greeting text
         setInterval(() => {

@@ -1,4 +1,5 @@
-import React, {useEffect, useState} from 'react'
+import React, {useState} from 'react'
+import axios from 'axios'
 
 import styles from '../../styles/containers/contactme.module.scss'
 import 'aos/dist/aos.css'
@@ -59,7 +60,15 @@ export default function ContactMe() {
                      *
                      * this is optional
                      */
-                    // TODO
+                    axios
+                        .post('/api/contactmail', {
+                            email: email,
+                            message: message,
+                            name: fullname,
+                            org: org,
+                        })
+                        .then(_res => {})
+                        .catch(_err => {})
                 } else {
                     // disable loading and all other stuffs when error
                     setLoading(false)
@@ -96,9 +105,11 @@ export default function ContactMe() {
                 // data-aos-mirror="true" // since I don't need this goes out of render
                 // data-aos-once="false" // because on mobile device due to less height some inputs may got invisible due to this
             >
-                <p className={styles.getInTouchText}>{'Keep In Touch'}</p>
+                <p className={styles.getInTouchText} data-aos="fade-up">
+                    {'Keep In Touch'}
+                </p>
 
-                <p className={styles.contactText}>
+                <p className={styles.contactText} data-aos="fade-up">
                     If you have anything to share, go ahead! It could be any
                     joke/funny stuff or any <span>advice</span>. Currently, I am
                     also open for <span>projects</span>. So yeah just enter
@@ -106,7 +117,7 @@ export default function ContactMe() {
                 </p>
 
                 <div className={styles.contactInputContainer}>
-                    <div className={styles.inputWrapper}>
+                    <div className={styles.inputWrapper} data-aos="fade-up">
                         <input
                             onChange={e => setFullname(e.target.value)}
                             value={fullname}
@@ -116,7 +127,7 @@ export default function ContactMe() {
                         />
                     </div>
 
-                    <div className={styles.inputWrapper}>
+                    <div className={styles.inputWrapper} data-aos="fade-up">
                         <input
                             onChange={e => setEmail(e.target.value)}
                             value={email}
@@ -133,7 +144,7 @@ export default function ContactMe() {
                         />
                     </div>
 
-                    <div className={styles.inputWrapper}>
+                    <div className={styles.inputWrapper} data-aos="fade-up">
                         <textarea
                             onChange={e =>
                                 setMessage(
@@ -153,7 +164,9 @@ export default function ContactMe() {
                         className={styles.submitBtn}
                         onClick={addContactDetails}
                         // if already sending a message then button will be disabled
-                        disabled={loading}>
+                        disabled={loading}
+                        data-aos="fade-up"
+                        data-aos-offset="20">
                         {'Submit!'}
 
                         {/* show loading animation when the seding process is ongoing */}

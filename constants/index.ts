@@ -18,6 +18,7 @@ export const MY_EXPERIENCE_STRING = 'experience' // string for the same above
 export const MY_PROJECTS_STRING = 'projects' // string for the same above
 export const CONTACT_ME_STRING = 'contactme' // string for the same above
 
+export const MY_EMAIL_ID = 'sobhanbera258@gmail.com' // this is my email id
 export const EMAIL_ID_REDIRECT_URL = 'mailto:sobhanbera258@gmail.com' // link to my GitHub profile
 export const GITHUB_URL = 'https://github.com/sobhanbera' // link to my GitHub profile
 export const LINKEDIN_URL = 'https://www.linkedin.com/in/sobhanbera' // url of my linkedin profile
@@ -35,4 +36,6 @@ export const EMAIL_REGEX =
     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
 // relative link to the resume file
-export const RESUME_LOCAL_URL = "/files/Sobhan Bera's Resume.pdf"
+export const RESUME_LOCAL_URL = "/files/Sobhan Bera's CV.pdf"
+
+export * from './response'

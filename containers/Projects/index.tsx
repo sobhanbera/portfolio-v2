@@ -11,7 +11,7 @@ export default function Projects() {
     return (
         <div className={styles.projectContainer} id={MY_PROJECTS_STRING}>
             <div className={styles.projectWrapper}>
-                <div className={styles.projectHeader}>
+                <div className={styles.projectHeader} data-aos="fade-up">
                     <p className={styles.line}></p>
                     <p className={styles.projectHeading}>{'Projects'}</p>
                     <p className={styles.line}></p>

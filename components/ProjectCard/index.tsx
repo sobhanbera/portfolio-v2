@@ -17,16 +17,16 @@ export default function ProjectCard({projectData}: ProjectCardProps) {
         link,
         github,
         playstore,
-        org,
-        year,
-        orgURL,
-        otherLink,
+        // org,
+        // year,
+        // orgURL,
+        // otherLink,
     } = projectData
 
     return (
         <Link href={link}>
             <a target={'_blank'} className={styles.projectCard}>
-                <div className={styles.projectCardHolder}>
+                <div className={styles.projectCardHolder} data-aos="fade-up">
                     <div className={styles.projectInitials}>
                         <div className={styles.projectHeader}>
                             <div className={styles.headerIcon}>

@@ -1,0 +1,3 @@
+export const INVALID_PAYLOAD = 'INVALID_PAYLOAD'
+export const EMAIL_SENT = 'EMAIL_SENT'
+export const EMAIL_NOT_SENT = 'EMAIL_NOT_SENT'
