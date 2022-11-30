@@ -74,7 +74,7 @@ const contactEmailTemplate = ({name, email, org, message}: EmailClientData) => `
 
             <div class="quote">
                 <p>Your Message -</p>
-                <p>${message}</p>
+                <p>${message.replaceAll('\\n', '<br />')}</p>
             </div>
         </div>
     </body>

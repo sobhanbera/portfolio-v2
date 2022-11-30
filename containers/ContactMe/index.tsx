@@ -36,7 +36,12 @@ export default function ContactMe() {
             )
         } else {
             setLoading(true)
-            addNewContactData(fullname, email, org, message).then(res => {
+            addNewContactData(
+                fullname,
+                email,
+                org,
+                message.replaceAll(/(?:\r\n|\r|\n)/g, '\\n'),
+            ).then(res => {
                 if (res === true) {
                     setLoading(false)
 
@@ -63,7 +68,10 @@ export default function ContactMe() {
                     axios
                         .post('/api/contactmail', {
                             email: email,
-                            message: message.replaceAll('\n', '\\n'), // to format the message perfectly this replacement statement is required
+                            message: message.replaceAll(
+                                /(?:\r\n|\r|\n)/g,
+                                '\\n',
+                            ), // to format the message perfectly this replacement statement is required
                             name: fullname,
                             org: org,
                         })
