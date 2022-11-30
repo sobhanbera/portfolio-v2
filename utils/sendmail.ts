@@ -11,7 +11,7 @@ let EmailClient = nodemailer.createTransport({
         user: EMAIL,
         pass: EMAIL_PASSWORD,
     },
-    // host: 'smtp.gmail.com',
+    host: 'smtp.gmail.com',
 })
 
 export function sendMail({email, org, message, name}: EmailClientData) {
