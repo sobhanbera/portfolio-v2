@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import {Analytics} from '@vercel/analytics/react'
 
 // import gsap from 'gsap'
 // import {motion} from 'framer-motion'
@@ -44,6 +45,8 @@ export default function Home() {
 
             {/* footer which floats */}
             <FloatingFooter />
+
+            <Analytics />
         </div>
     )
 }

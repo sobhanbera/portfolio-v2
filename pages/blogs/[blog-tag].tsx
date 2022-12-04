@@ -2,6 +2,7 @@
 import React, {ReactElement, useEffect, useState} from 'react'
 import Head from 'next/head'
 import {useRouter} from 'next/router'
+import {Analytics} from '@vercel/analytics/react'
 
 import styles from '../../styles/pages/blogcontent.module.scss'
 
@@ -98,6 +99,8 @@ export default function ActualBlogPage({}: Props): ReactElement {
 
                 <MarkdownRenderer body={blogData.body} includeBottomSpacing />
             </div>
+
+            <Analytics />
         </div>
     )
 }
