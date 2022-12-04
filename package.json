@@ -17,6 +17,7 @@
         "prepare": "husky install"
     },
     "dependencies": {
+        "@vercel/analytics": "^0.1.5",
         "aos": "^2.3.4",
         "axios": "^1.2.0",
         "dayjs": "^1.11.6",
