@@ -24,7 +24,9 @@ This is the second instance of my Portfolio website (The 2nd version of my portf
 If you find the project useful just give it a star ⭐️.
 
 ## Features
+
 The major features of this portfolio website are:
+
 1. Elegant color selection.
 2. Smooth animations and transitions.
 3. Over 10+ Themes! Which are selected randomly whenever website is loaded.
@@ -60,7 +62,7 @@ yarn install
 
         -   Copy the Google Analytics Tracking ID from the console (This is the same as the `measurementId` in firebase SDK).
 
-        -   Paste the string in this file - `lib/gtags.js`
+        -   Paste the string in this file - `lib/gtag.js`
 
 3.  Now it's time to spin up the live server.
 
@@ -76,5 +78,4 @@ The live server is up and running at port `3000`. Here - [http://localhost:3000]
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme).
 
-Check out  [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
+Check out [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
